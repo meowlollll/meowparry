@@ -27,6 +27,7 @@ local CFG = {
     SkillBuffer = false,
     Logger = false,
     Autoload = true,
+    StartSilent = false,
     ESP = false,
     ESPHighlight = true,
     ESPNameTag = true,
@@ -488,6 +489,7 @@ local win = make("Frame", {
     Parent = gui,
 })
 make("UIStroke", {Color = C.Line, Parent = win})
+win.Visible = not CFG.StartSilent
 
 local titleBar = make("Frame", {
     Size = UDim2.new(1, 0, 0, 30),
@@ -1186,6 +1188,7 @@ checkbox(keys, "No Parry While Typing", "NoParryTyping")
 checkbox(keys, "No Parry While Emoting", "NoParryEmote")
 keybind(keys, "Enabled")
 checkbox(keys, "Autoload Config", "Autoload")
+checkbox(keys, "Silent Start", "StartSilent")
 local saveBtn = make("TextButton", {
     Size = UDim2.new(1, 0, 0, 22),
     BackgroundColor3 = C.Item,
