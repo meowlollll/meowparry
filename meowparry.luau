@@ -1,9 +1,8 @@
--- clover auto parry ui
--- timings: clover-animation-timings.json (same folder, readfile)
--- F6 toggles auto parry, UI key toggles the window (default RightShift)
 
 local Players = game:GetService("Players")
 local UIS = game:GetService("UserInputService")
+local RunService = game:GetService("RunService")
+local CollectionService = game:GetService("CollectionService")
 local VIM = game:GetService("VirtualInputManager")
 local HttpService = game:GetService("HttpService")
 local RS = game:GetService("ReplicatedStorage")
@@ -12,44 +11,62 @@ local LP = Players.LocalPlayer
 local Packets = require(RS.Modules.Packets)
 local BlockInput = Packets.Combat.packets.BlockInput
 
-local SLOT_COUNT = 5
+local SLOT_COUNT = 10
 
 local CFG = {
     Enabled = true,
-    RollOnCooldown = true,
+    RollOnCooldown = false,
     RollBehind = true,
     DodgeGrimoire = false,
-    RollCancel = true,
+    RollCancel = false,
     NoParryM1 = true,
-    NoParryTabbed = true,   -- F7: no parry while the Roblox window is not focused
-    NoParryTyping = true,   -- F8: no parry while a text box has focus
-    NoParryEmote = true,    -- F9: no parry while an emote anim is playing
+    NoParryTabbed = true,
+    NoParryTyping = true,
+    NoParryEmote = true,
     PingComp = true,
     SkillBuffer = false,
     Logger = false,
+    Autoload = true,
+    ESP = false,
+    ESPHighlight = true,
+    ESPNameTag = true,
     Filter = "All",
-    UIKey = "RightShift",
+    UIKey = "RightControl",
     ParryLead = 0.1,
-    InstantCutoff = 0.15,   -- first hit marker sooner than this after the anim starts = instant move, not parried
+    InstantCutoff = 0.15,
     ParryWindow = 0.15,
-    FallbackDelay = 0.35,
+    FallbackDelay = 0.9,
     Range = 24,
     RollCancelDelay = 0.05,
     ParryCooldown = 0.6,
     PingScale = 1,
-    -- hotbar: each slot is a key the game already binds to a skill. FILL: match these to your binds
+    BroomSpeed = 1.0,
+
     SlotKey1 = "One",
     SlotKey2 = "Two",
     SlotKey3 = "Three",
     SlotKey4 = "Four",
     SlotKey5 = "Five",
+    SlotKey6 = "Six",
+    SlotKey7 = "Seven",
+    SlotKey8 = "Eight",
+    SlotKey9 = "Nine",
+    SlotKey10 = "Zero",
     SlotArmed1 = false,
     SlotArmed2 = false,
     SlotArmed3 = false,
     SlotArmed4 = false,
     SlotArmed5 = false,
+    SlotArmed6 = false,
+    SlotArmed7 = false,
+    SlotArmed8 = false,
+    SlotArmed9 = false,
+    SlotArmed10 = false,
+    WhitelistOnly = false,
+    NPCESP = false,
+    QuestESP = false,
     RemoteBase = "https://raw.githubusercontent.com/meowlollll/meowparry/main/",
-    -- readfile is relative to the executor workspace, so try the likely folder layouts
+
     TimingsFiles = {
         "CloverRPG/clover-animation-timings.json",
         "CloverRPG\\clover-animation-timings.json",
@@ -57,10 +74,39 @@ local CFG = {
     },
 }
 
+local CONFIG_FILE = "CloverRPG/meowparry-config.json"
+local CONFIG_SKIP = {
+    TimingsFiles = true, RemoteBase = true,
+    SlotArmed1 = true, SlotArmed2 = true, SlotArmed3 = true, SlotArmed4 = true, SlotArmed5 = true,
+    SlotArmed6 = true, SlotArmed7 = true, SlotArmed8 = true, SlotArmed9 = true, SlotArmed10 = true,
+}
+
+local function saveConfig()
+    local out = {}
+    for k, v in CFG do
+        if not CONFIG_SKIP[k] and type(v) ~= "table" then out[k] = v end
+    end
+    pcall(writefile, CONFIG_FILE, HttpService:JSONEncode(out))
+end
+
+local function loadConfig()
+    local okRead, text = pcall(readfile, CONFIG_FILE)
+    if not okRead then return end
+    local okDecode, data = pcall(HttpService.JSONDecode, HttpService, text)
+    if not okDecode or type(data) ~= "table" then return end
+    for k, v in data do
+        if CFG[k] ~= nil and not CONFIG_SKIP[k] and type(v) == type(CFG[k]) then CFG[k] = v end
+    end
+end
+
+if CFG.Autoload then loadConfig() end
+
 local HIT_PATTERNS = {
     "^HitWindow", "^SlamHit$", "^Impact$", "^Strike$", "^Kick$", "^Slash$",
     "^Attack%d*$", "^Slam$", "^Palm$", "^Throw$", "^Release$", "^Swing$",
     "^Hit$", "^Shoot$", "^Explosion$", "^Roar$",
+
+    "^DoSkill$", "^FinalStrike$", "^SpinWindow", "^Fire$", "^Beam$",
 }
 
 local IGNORE_PATHS = {
@@ -92,7 +138,7 @@ do
             break
         end
     end
-    -- no local copy: fetch the json from the repo, so loadstring from GitHub works on its own
+
     if not raw then
         local okHttp, text = pcall(function()
             return game:HttpGet(CFG.RemoteBase .. "clover-animation-timings.json")
@@ -112,12 +158,11 @@ do
                 end
                 table.sort(hits)
             end
-            -- misdirects and instant hits are not parried: they bait or land before a block can start.
-            -- Feint markers are NOT used here: basic chains (Punch, Sword, Katana...) all carry OpenFeint/CloseFeint
+
             local misdirect = string.find(a.path, "Misdirect", 1, true) ~= nil
             local instant = #hits > 0 and hits[1] < CFG.InstantCutoff
             local skip = misdirect or instant
-            -- grimoire and boss moves often have no hit marker in the json, keep them with a fallback delay
+
             local attack = not pathIgnored(a.path) and (string.find(a.path, "Skills.", 1, true)
                 or string.find(a.path, "Magic.", 1, true)
                 or string.find(a.path, "Server.", 1, true)
@@ -132,12 +177,39 @@ do
     end
 end
 
----------------------------------------------------------------------------
--- combat logic
----------------------------------------------------------------------------
-
 local refreshers = {}
 local lastPress = 0
+
+local LEARN_FILE = "CloverRPG/learned-timings.json"
+local learned = {}
+do
+    local okRead, text = pcall(readfile, LEARN_FILE)
+    if okRead then
+        local okDecode, data = pcall(HttpService.JSONDecode, HttpService, text)
+        if okDecode and type(data) == "table" then learned = data end
+    end
+end
+local function saveLearned()
+    pcall(writefile, LEARN_FILE, HttpService:JSONEncode(learned))
+end
+local activeNoMarker = {}
+
+local function learnFromHit()
+    local now = os.clock()
+    for i = #activeNoMarker, 1, -1 do
+        local a = activeNoMarker[i]
+        if now - a.t > 4 or not a.track.IsPlaying then
+            table.remove(activeNoMarker, i)
+        elseif a.track.TimePosition > 0 then
+            local t = a.track.TimePosition
+            learned[a.id] = learned[a.id] and (learned[a.id] * 0.6 + t * 0.4) or t
+            saveLearned()
+            table.remove(activeNoMarker, i)
+            if CFG.Logger then print(string.format("[learn] %s hit at %.3fs", a.id, learned[a.id])) end
+            return
+        end
+    end
+end
 local blockUntil = 0
 local holding = false
 local windowFocused = true
@@ -185,7 +257,6 @@ local function emoting()
     return false
 end
 
--- true while any of the pause checks are on and their condition holds
 local function paused()
     if CFG.NoParryTabbed and not windowFocused then return true end
     if CFG.NoParryTyping and UIS:GetFocusedTextBox() then return true end
@@ -193,7 +264,6 @@ local function paused()
     return false
 end
 
--- dodge and roll cancel both press Q, the game's roll bind
 local DODGE_KEY = Enum.KeyCode.Q
 
 local function pressKey(key)
@@ -202,7 +272,6 @@ local function pressKey(key)
     VIM:SendKeyEvent(false, key, false, game)
 end
 
--- fires each armed hotbar slot once, then disarms it
 local function fireBuffered()
     if not CFG.SkillBuffer then return end
     for i = 1, SLOT_COUNT do
@@ -215,8 +284,6 @@ local function fireBuffered()
     end
 end
 
--- Q starts a roll, which moves you forward. the Cancel packet right after stops that velocity,
--- and the game plays its cancel anim in place (Dash.lua OnCancelled), so this is the on-the-spot dodge
 local RollInput = Packets.Combat.packets.RollInput
 
 local function dodgeInPlace()
@@ -234,7 +301,6 @@ local function cancelRoll()
     dodgeInPlace()
 end
 
--- one shared hold: overlapping parries extend the block instead of stacking loops
 local function holdBlock(duration)
     blockUntil = math.max(blockUntil, os.clock() + duration)
     if holding then return end
@@ -252,7 +318,7 @@ end
 local function parry()
     lastPress = os.clock()
     if CFG.Logger then print(string.format("[press] lead %.0fms", CFG.ParryLead * 1000)) end
-    -- block starts ParryLead before the hit, so it must stay up ParryLead + ParryWindow to cover it
+
     holdBlock(CFG.ParryLead + CFG.ParryWindow)
 
     if CFG.RollCancel then
@@ -264,7 +330,6 @@ local function parry()
     end
 end
 
--- every scheduled hit gets its own action, so multi-hit moves get one parry per hit
 local function run(action)
     action()
 end
@@ -272,7 +337,7 @@ end
 local function genericAttack(track)
     if track.Looped then return false end
     if track.Length < 0.2 then return false end
-    -- jumps and slams often play at a lower priority, so the priority check would drop them
+
     local name = track.Name
     local bigMove = string.find(name, "Slam", 1, true) or string.find(name, "Jump", 1, true)
         or string.find(name, "Leap", 1, true) or string.find(name, "Ground", 1, true)
@@ -312,17 +377,27 @@ local function onTrack(model, track)
         print("[anim]", model.Name, id, entry and entry.path or "unknown", track.Length)
     end
 
-    -- dodge (roll) instead of parry when the attacker is behind, or for grimoire moves when enabled
     local grimoire = entry ~= nil and (string.find(entry.path, "Magic.", 1, true) or string.find(entry.path, "Skills.", 1, true)) ~= nil
     local behind = (CFG.RollBehind and attackerBehind(myRoot, theirRoot))
         or (CFG.DodgeGrimoire and grimoire)
     local ping = CFG.PingComp and (LP:GetNetworkPing() * CFG.PingScale * 0.5) or 0
     local speed = math.max(track.Speed, 0.05)
     local scheduled = entry ~= nil and #entry.hits > 0
-    local times = scheduled and entry.hits or {CFG.FallbackDelay}
+    local times
+    if scheduled then
+        times = entry.hits
+    else
+
+        times = {learned[id] or track.Length * CFG.FallbackDelay}
+        local now = os.clock()
+        for i = #activeNoMarker, 1, -1 do
+            if now - activeNoMarker[i].t > 4 then table.remove(activeNoMarker, i) end
+        end
+        table.insert(activeNoMarker, {track = track, id = id, t = now})
+    end
 
     for _, h in times do
-        local at = math.max(0, (scheduled and h / speed or h) - CFG.ParryLead - ping)
+        local at = math.max(0, h / speed - CFG.ParryLead - ping)
         task.delay(at, function()
             if not track.IsPlaying or not CFG.Enabled then return end
             run(function()
@@ -344,11 +419,11 @@ local function onTrack(model, track)
     end
 end
 
--- damage taken shortly after a press means that parry missed
 local function watchHumanoid(char)
     local hum = char:WaitForChild("Humanoid")
     local last = hum.Health
     hum.HealthChanged:Connect(function(h)
+        if h < last then learnFromHit() end
         if h < last and CFG.Logger then
             local since = os.clock() - lastPress
             print(string.format("[hit] took %.1f dmg, %.0fms after last press", last - h, since * 1000))
@@ -376,10 +451,6 @@ end
 workspace.DescendantAdded:Connect(function(d)
     if d:IsA("Animator") then hookAnimator(d) end
 end)
-
----------------------------------------------------------------------------
--- ui
----------------------------------------------------------------------------
 
 local C = {
     Bg = Color3.fromRGB(26, 17, 25),
@@ -489,7 +560,7 @@ local tabBar = make("Frame", {
     Parent = win,
 })
 
-local TABS = {"Combat", "Skills", "Settings"}
+local TABS = {"Combat", "Skills", "ESP", "Settings"}
 local pages, tabButtons = {}, {}
 
 local function selectTab(name)
@@ -751,7 +822,6 @@ local function dropdown(body, label, key, options)
     register(label, holder)
 end
 
--- hotkeys: click a key button, then press the new key (Escape cancels)
 local HOTKEYS = {
     Enabled = Enum.KeyCode.F6,
 }
@@ -794,7 +864,272 @@ local function keybind(body, name)
     register("toggle " .. HOTKEY_LABELS[name], row)
 end
 
-local KEY_OPTIONS = {"One", "Two", "Three", "Four", "Five", "Q", "E", "R", "F", "Z", "X", "C"}
+local broomVel
+local broomConn
+local scalingBroom = false
+local lastBroomFind = 0
+
+local function findBroomVelocity()
+    local char = LP.Character
+    for _, d in workspace:GetDescendants() do
+        if d:IsA("LinearVelocity") and d.Enabled
+            and ((char and d:IsDescendantOf(char)) or string.find(d:GetFullName(), "Broom", 1, true)) then
+            return d
+        end
+    end
+end
+
+local function hookBroom(lv)
+    if broomConn then broomConn:Disconnect() end
+    broomVel = lv
+    broomConn = lv:GetPropertyChangedSignal("VectorVelocity"):Connect(function()
+        if scalingBroom or CFG.BroomSpeed <= 1 then return end
+        scalingBroom = true
+        local v = lv.VectorVelocity
+        lv.VectorVelocity = Vector3.new(v.X * CFG.BroomSpeed, v.Y, v.Z * CFG.BroomSpeed)
+        scalingBroom = false
+    end)
+end
+
+RunService.Heartbeat:Connect(function()
+    if broomVel and broomVel.Parent then return end
+    if os.clock() - lastBroomFind < 0.5 then return end
+    lastBroomFind = os.clock()
+    local lv = findBroomVelocity()
+    if lv then hookBroom(lv) end
+end)
+
+local whitelist = {}
+local playerList
+local ESP_TAG = "meowESP"
+
+local function clearESP(player)
+    local char = player.Character
+    if not char then return end
+    local h = char:FindFirstChild(ESP_TAG)
+    if h then h:Destroy() end
+    local head = char:FindFirstChild("Head")
+    local bb = head and head:FindFirstChild(ESP_TAG .. "Tag")
+    if bb then bb:Destroy() end
+end
+
+local function drawESP(player)
+    local char = player.Character
+    local root = char and char.PrimaryPart
+    local hum = char and char:FindFirstChildOfClass("Humanoid")
+    local head = char and char:FindFirstChild("Head")
+    if not (root and hum and head) then return end
+
+    local h = char:FindFirstChild(ESP_TAG)
+    if CFG.ESPHighlight then
+        if not h then
+            h = make("Highlight", {
+                Name = ESP_TAG,
+                OutlineColor = Color3.new(1, 1, 1),
+                FillTransparency = 0.6,
+                OutlineTransparency = 0,
+                Adornee = char,
+                Parent = char,
+            })
+        end
+        h.FillColor = hum.Health <= 0 and Color3.fromRGB(120, 0, 0) or Color3.fromRGB(255, 0, 0)
+    elseif h then
+        h:Destroy()
+    end
+
+    local bb = head:FindFirstChild(ESP_TAG .. "Tag")
+    if CFG.ESPNameTag then
+        if not bb then
+            bb = make("BillboardGui", {
+                Name = ESP_TAG .. "Tag",
+                Adornee = head,
+                Size = UDim2.new(0, 130, 0, 25),
+                StudsOffset = Vector3.new(0, 2, 0),
+                AlwaysOnTop = true,
+                Parent = head,
+            })
+            make("TextLabel", {
+                Name = "Label",
+                Size = UDim2.new(1, 0, 1, 0),
+                BackgroundTransparency = 1,
+                TextColor3 = Color3.new(1, 1, 1),
+                Font = FONT,
+                TextScaled = true,
+                TextStrokeTransparency = 0.6,
+                Parent = bb,
+            })
+        end
+        local myRoot = getRoot(LP.Character)
+        local dist = myRoot and math.floor((myRoot.Position - root.Position).Magnitude) or 0
+        bb.Label.Text = string.format("%s | %dm | %d hp", player.Name, dist, math.floor(hum.Health))
+    elseif bb then
+        bb:Destroy()
+    end
+end
+
+task.spawn(function()
+    while true do
+        for _, p in Players:GetPlayers() do
+            if p ~= LP then
+                if CFG.ESP and (not CFG.WhitelistOnly or whitelist[p.Name]) then drawESP(p) else clearESP(p) end
+            end
+        end
+        task.wait(0.3)
+    end
+end)
+
+local function rebuildPlayers()
+    if not playerList then return end
+    for _, child in playerList:GetChildren() do
+        if child:IsA("TextButton") then child:Destroy() end
+    end
+    for _, p in Players:GetPlayers() do
+        if p ~= LP then
+            local row = make("TextButton", {
+                Name = p.Name,
+                Size = UDim2.new(1, 0, 0, 20),
+                BackgroundTransparency = 1,
+                Text = "",
+                AutoButtonColor = false,
+                Parent = playerList,
+            })
+            local box = make("Frame", {
+                Size = UDim2.fromOffset(14, 14),
+                Position = UDim2.fromOffset(2, 3),
+                BackgroundColor3 = C.Item,
+                BorderSizePixel = 0,
+                Parent = row,
+            })
+            make("UIStroke", {Color = C.Line, Parent = box})
+            local fill = make("Frame", {
+                Size = UDim2.fromOffset(8, 8),
+                Position = UDim2.fromOffset(3, 3),
+                BackgroundColor3 = C.Accent,
+                BorderSizePixel = 0,
+                Visible = whitelist[p.Name] == true,
+                Parent = box,
+            })
+            make("TextLabel", {
+                Size = UDim2.new(1, -26, 1, 0),
+                Position = UDim2.fromOffset(24, 0),
+                BackgroundTransparency = 1,
+                Text = p.Name,
+                TextColor3 = C.Text,
+                Font = FONT,
+                TextSize = TS,
+                TextXAlignment = Enum.TextXAlignment.Left,
+                Parent = row,
+            })
+            row.MouseButton1Click:Connect(function()
+                whitelist[p.Name] = not whitelist[p.Name]
+                fill.Visible = whitelist[p.Name] == true
+            end)
+        end
+    end
+end
+
+Players.PlayerAdded:Connect(rebuildPlayers)
+Players.PlayerRemoving:Connect(function(p)
+    clearESP(p)
+    rebuildPlayers()
+end)
+
+local OBJ_TAG = "meowObj"
+local NPC_COLOR = Color3.fromRGB(255, 200, 80)
+local QUEST_COLOR = Color3.fromRGB(120, 255, 140)
+
+local function anchorOf(inst)
+    if inst:IsA("BasePart") then return inst end
+    if inst:IsA("Model") then return inst.PrimaryPart or inst:FindFirstChildWhichIsA("BasePart") end
+end
+
+local function clearObject(inst)
+    local h = inst:FindFirstChild(OBJ_TAG)
+    if h then h:Destroy() end
+    local part = anchorOf(inst)
+    local bb = part and part:FindFirstChild(OBJ_TAG .. "Tag")
+    if bb then bb:Destroy() end
+end
+
+local function drawObject(inst, text, color)
+    local part = anchorOf(inst)
+    if not part then return end
+    local h = inst:FindFirstChild(OBJ_TAG)
+    if CFG.ESPHighlight then
+        if not h then
+            h = make("Highlight", {
+                Name = OBJ_TAG,
+                OutlineColor = Color3.new(1, 1, 1),
+                FillTransparency = 0.6,
+                OutlineTransparency = 0,
+                Adornee = inst,
+                Parent = inst,
+            })
+        end
+        h.FillColor = color
+    elseif h then
+        h:Destroy()
+    end
+    local bb = part:FindFirstChild(OBJ_TAG .. "Tag")
+    if not bb then
+        bb = make("BillboardGui", {
+            Name = OBJ_TAG .. "Tag",
+            Adornee = part,
+            Size = UDim2.new(0, 150, 0, 25),
+            StudsOffset = Vector3.new(0, 3, 0),
+            AlwaysOnTop = true,
+            Parent = part,
+        })
+        make("TextLabel", {
+            Name = "Label",
+            Size = UDim2.new(1, 0, 1, 0),
+            BackgroundTransparency = 1,
+            TextColor3 = color,
+            Font = FONT,
+            TextScaled = true,
+            TextStrokeTransparency = 0.6,
+            Parent = bb,
+        })
+    end
+    local myRoot = getRoot(LP.Character)
+    local dist = myRoot and math.floor((myRoot.Position - part.Position).Magnitude) or 0
+    bb.Label.Text = string.format("%s | %dm", text, dist)
+end
+
+local function objectTargets()
+    local out = {}
+    if CFG.NPCESP then
+        for _, inst in CollectionService:GetTagged("NPC") do
+            table.insert(out, {inst = inst, text = tostring(inst:GetAttribute("NPCId") or inst.Name), color = NPC_COLOR})
+        end
+    end
+    if CFG.QuestESP then
+        for _, tag in {"QuestNPC", "QuestObject"} do
+            for _, inst in CollectionService:GetTagged(tag) do
+                table.insert(out, {inst = inst, text = "! " .. inst.Name, color = QUEST_COLOR})
+            end
+        end
+    end
+    return out
+end
+
+task.spawn(function()
+    local drawn = {}
+    while true do
+        local now = {}
+        for _, t in objectTargets() do
+            now[t.inst] = true
+            drawObject(t.inst, t.text, t.color)
+        end
+        for inst in pairs(drawn) do
+            if not now[inst] then clearObject(inst) end
+        end
+        drawn = now
+        task.wait(0.5)
+    end
+end)
+
+local KEY_OPTIONS = {"One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Zero", "Q", "E", "R", "F", "Z", "X", "C"}
 
 local combat = pages.Combat
 local left = column(combat, "L", "Main")
@@ -810,21 +1145,26 @@ dropdown(left, "Auto Parry Filters", "Filter", {"All", "PVE", "PVP"})
 local right = column(combat, "R", "Timing")
 slider(right, "Parry Lead", "ParryLead", 0, 0.6, 0.01, "s")
 slider(right, "Parry Window", "ParryWindow", 0.05, 0.4, 0.01, "s")
-slider(right, "Fallback Delay", "FallbackDelay", 0.1, 0.8, 0.01, "s")
+slider(right, "Hit At (no marker)", "FallbackDelay", 0.3, 1.2, 0.05, "x anim")
 slider(right, "Range", "Range", 5, 40, 1, " studs")
 slider(right, "Roll Cancel Delay", "RollCancelDelay", 0, 0.5, 0.01, "s")
 slider(right, "Parry Cooldown", "ParryCooldown", 0, 2, 0.05, "s")
 slider(right, "Ping Scale", "PingScale", 0, 2, 0.1, "x")
+slider(right, "Broom Speed", "BroomSpeed", 1, 2, 0.1, "x")
 
 local skills = pages.Skills
-local hotbar = column(skills, "L", "Hotbar")
+local hotbar = column(skills, "L", "Slots 1-5")
 checkbox(hotbar, "Skill Buffer On", "SkillBuffer")
-for i = 1, SLOT_COUNT do
+for i = 1, 5 do
     checkbox(hotbar, "Slot " .. i .. " Buffered", "SlotArmed" .. i)
     dropdown(hotbar, "Slot " .. i .. " Key", "SlotKey" .. i, KEY_OPTIONS)
 end
 
-local buffer = column(skills, "R", "Buffer")
+local buffer = column(skills, "R", "Slots 6-10")
+for i = 6, SLOT_COUNT do
+    checkbox(buffer, "Slot " .. i .. " Buffered", "SlotArmed" .. i)
+    dropdown(buffer, "Slot " .. i .. " Key", "SlotKey" .. i, KEY_OPTIONS)
+end
 make("TextLabel", {
     Size = UDim2.new(1, 0, 0, 80),
     BackgroundTransparency = 1,
@@ -845,9 +1185,44 @@ checkbox(keys, "No Parry While Tabbed Out", "NoParryTabbed")
 checkbox(keys, "No Parry While Typing", "NoParryTyping")
 checkbox(keys, "No Parry While Emoting", "NoParryEmote")
 keybind(keys, "Enabled")
+checkbox(keys, "Autoload Config", "Autoload")
+local saveBtn = make("TextButton", {
+    Size = UDim2.new(1, 0, 0, 22),
+    BackgroundColor3 = C.Item,
+    BorderSizePixel = 0,
+    Text = "Save Config",
+    TextColor3 = C.Text,
+    Font = FONT,
+    TextSize = TS,
+    AutoButtonColor = false,
+    Parent = keys,
+})
+make("UIStroke", {Color = C.Line, Parent = saveBtn})
+saveBtn.MouseButton1Click:Connect(saveConfig)
 
 local debug = column(settings, "R", "Debug")
 checkbox(debug, "Print Animation Logs", "Logger")
+
+local esp = column(pages.ESP, "L", "ESP")
+checkbox(esp, "ESP On", "ESP")
+checkbox(esp, "Highlight", "ESPHighlight")
+checkbox(esp, "Name Tag", "ESPNameTag")
+checkbox(esp, "Only Whitelisted", "WhitelistOnly")
+checkbox(esp, "NPC ESP", "NPCESP")
+checkbox(esp, "Quest ESP", "QuestESP")
+local playerBody = column(pages.ESP, "R", "Whitelist")
+playerList = make("ScrollingFrame", {
+    Size = UDim2.new(1, 0, 1, 0),
+    BackgroundTransparency = 1,
+    BorderSizePixel = 0,
+    ScrollBarThickness = 4,
+    ScrollBarImageColor3 = C.Accent,
+    CanvasSize = UDim2.new(0, 0, 0, 0),
+    AutomaticCanvasSize = Enum.AutomaticSize.Y,
+    Parent = playerBody,
+})
+make("UIListLayout", {Padding = UDim.new(0, 4), SortOrder = Enum.SortOrder.Name, Parent = playerList})
+rebuildPlayers()
 
 selectTab("Combat")
 
