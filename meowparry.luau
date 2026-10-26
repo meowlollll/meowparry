@@ -21,6 +21,9 @@ local CFG = {
     DodgeGrimoire = false,
     RollCancel = true,
     NoParryM1 = true,
+    NoParryTabbed = true,   -- F7: no parry while the Roblox window is not focused
+    NoParryTyping = true,   -- F8: no parry while a text box has focus
+    NoParryEmote = true,    -- F9: no parry while an emote anim is playing
     PingComp = true,
     SkillBuffer = false,
     Logger = false,
@@ -45,6 +48,7 @@ local CFG = {
     SlotArmed3 = false,
     SlotArmed4 = false,
     SlotArmed5 = false,
+    RemoteBase = "https://raw.githubusercontent.com/meowlollll/meowparry/main/",
     -- readfile is relative to the executor workspace, so try the likely folder layouts
     TimingsFiles = {
         "CloverRPG/clover-animation-timings.json",
@@ -88,8 +92,15 @@ do
             break
         end
     end
+    -- no local copy: fetch the json from the repo, so loadstring from GitHub works on its own
+    if not raw then
+        local okHttp, text = pcall(function()
+            return game:HttpGet(CFG.RemoteBase .. "clover-animation-timings.json")
+        end)
+        if okHttp then raw = text end
+    end
     local ok, err = pcall(function()
-        assert(raw, "no timings file in: " .. table.concat(CFG.TimingsFiles, " | "))
+        assert(raw, "no timings file locally or at " .. CFG.RemoteBase)
         local data = HttpService:JSONDecode(raw)
         for _, a in data.animations do
             local hits = {}
@@ -129,6 +140,10 @@ local refreshers = {}
 local lastPress = 0
 local blockUntil = 0
 local holding = false
+local windowFocused = true
+
+UIS.WindowFocusReleased:Connect(function() windowFocused = false end)
+UIS.WindowFocused:Connect(function() windowFocused = true end)
 
 local function getRoot(model)
     return model and model:FindFirstChild("HumanoidRootPart")
@@ -155,6 +170,26 @@ local function attacking()
             return true
         end
     end
+    return false
+end
+
+local function emoting()
+    local char = LP.Character
+    local hum = char and char:FindFirstChildOfClass("Humanoid")
+    local animator = hum and hum:FindFirstChildOfClass("Animator")
+    if not animator then return false end
+    for _, t in animator:GetPlayingAnimationTracks() do
+        local path = t.Animation and t.Animation:GetFullName() or ""
+        if string.find(path, "Emotes", 1, true) then return true end
+    end
+    return false
+end
+
+-- true while any of the pause checks are on and their condition holds
+local function paused()
+    if CFG.NoParryTabbed and not windowFocused then return true end
+    if CFG.NoParryTyping and UIS:GetFocusedTextBox() then return true end
+    if CFG.NoParryEmote and emoting() then return true end
     return false
 end
 
@@ -237,7 +272,11 @@ end
 local function genericAttack(track)
     if track.Looped then return false end
     if track.Length < 0.2 then return false end
-    if track.Priority.Value < Enum.AnimationPriority.Action.Value then return false end
+    -- jumps and slams often play at a lower priority, so the priority check would drop them
+    local name = track.Name
+    local bigMove = string.find(name, "Slam", 1, true) or string.find(name, "Jump", 1, true)
+        or string.find(name, "Leap", 1, true) or string.find(name, "Ground", 1, true)
+    if not bigMove and track.Priority.Value < Enum.AnimationPriority.Action.Value then return false end
     local path = track.Animation and track.Animation:GetFullName() or ""
     return not pathIgnored(path)
 end
@@ -287,6 +326,10 @@ local function onTrack(model, track)
         task.delay(at, function()
             if not track.IsPlaying or not CFG.Enabled then return end
             run(function()
+                if paused() then
+                    if CFG.Logger then print("[decide] paused -> skip") end
+                    return
+                end
                 if behind then
                     if CFG.Logger then print("[decide] dodge -> roll") end
                     roll()
@@ -708,6 +751,49 @@ local function dropdown(body, label, key, options)
     register(label, holder)
 end
 
+-- hotkeys: click a key button, then press the new key (Escape cancels)
+local HOTKEYS = {
+    Enabled = Enum.KeyCode.F6,
+}
+local HOTKEY_LABELS = {
+    Enabled = "Auto Parry",
+}
+local listening = nil
+local keyButtons = {}
+
+local function keybind(body, name)
+    local row = make("Frame", {Size = UDim2.new(1, 0, 0, 22), BackgroundTransparency = 1, Parent = body})
+    make("TextLabel", {
+        Size = UDim2.new(1, -90, 1, 0),
+        BackgroundTransparency = 1,
+        Text = "Toggle " .. HOTKEY_LABELS[name],
+        TextColor3 = C.Text,
+        Font = FONT,
+        TextSize = TS,
+        TextXAlignment = Enum.TextXAlignment.Left,
+        Parent = row,
+    })
+    local btn = make("TextButton", {
+        Size = UDim2.fromOffset(80, 22),
+        Position = UDim2.new(1, -80, 0, 0),
+        BackgroundColor3 = C.Item,
+        BorderSizePixel = 0,
+        Text = HOTKEYS[name].Name,
+        TextColor3 = C.Text,
+        Font = FONT,
+        TextSize = TS,
+        AutoButtonColor = false,
+        Parent = row,
+    })
+    make("UIStroke", {Color = C.Line, Parent = btn})
+    keyButtons[name] = btn
+    btn.MouseButton1Click:Connect(function()
+        listening = name
+        btn.Text = "press a key"
+    end)
+    register("toggle " .. HOTKEY_LABELS[name], row)
+end
+
 local KEY_OPTIONS = {"One", "Two", "Three", "Four", "Five", "Q", "E", "R", "F", "Z", "X", "C"}
 
 local combat = pages.Combat
@@ -755,6 +841,10 @@ make("TextLabel", {
 local settings = pages.Settings
 local keys = column(settings, "L", "Keys")
 dropdown(keys, "UI Toggle", "UIKey", {"RightShift", "RightControl", "Insert", "Home"})
+checkbox(keys, "No Parry While Tabbed Out", "NoParryTabbed")
+checkbox(keys, "No Parry While Typing", "NoParryTyping")
+checkbox(keys, "No Parry While Emoting", "NoParryEmote")
+keybind(keys, "Enabled")
 
 local debug = column(settings, "R", "Debug")
 checkbox(debug, "Print Animation Logs", "Logger")
@@ -762,11 +852,25 @@ checkbox(debug, "Print Animation Logs", "Logger")
 selectTab("Combat")
 
 UIS.InputBegan:Connect(function(input, gp)
+    if listening then
+        if input.UserInputType ~= Enum.UserInputType.Keyboard then return end
+        if input.KeyCode ~= Enum.KeyCode.Escape then
+            HOTKEYS[listening] = input.KeyCode
+        end
+        keyButtons[listening].Text = HOTKEYS[listening].Name
+        listening = nil
+        return
+    end
     if gp then return end
     if input.KeyCode == Enum.KeyCode[CFG.UIKey] then
         win.Visible = not win.Visible
-    elseif input.KeyCode == Enum.KeyCode.F6 then
-        CFG.Enabled = not CFG.Enabled
-        refreshers.Enabled()
+        return
+    end
+    for name, key in HOTKEYS do
+        if input.KeyCode == key then
+            CFG[name] = not CFG[name]
+            refreshers[name]()
+            return
+        end
     end
 end)
