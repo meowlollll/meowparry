@@ -1,0 +1,7189 @@
+{
+  "schemaVersion": 1,
+  "timeBasis": "seconds on source animation timeline at 1x speed",
+  "coverage": "400 animation instances currently replicated in this session; 339 unique assets",
+  "limitations": [
+    "Not validated parry windows.",
+    "Actual speed changes, pauses, offsets, latency, hitbox activation, and parryability were not measured.",
+    "AnimationEnd and duration are not proven recovery/endlag.",
+    "Assets absent from this session are outside coverage."
+  ],
+  "animations": [
+    {
+      "path": "ReplicatedStorage.Animations.Movement.Human.StandIdle",
+      "name": "StandIdle",
+      "assetId": "9839955546",
+      "durationSeconds": 2.6500000953674316,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Movement.Human.Walk",
+      "name": "Walk",
+      "assetId": "9839859772",
+      "durationSeconds": 1.0770833492279053,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "RightFootDown",
+          "time": 0.22374999523162842
+        },
+        {
+          "kind": "keyframe",
+          "name": "RightFootDown",
+          "time": 0.23083333671092987
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "LeftFootDown",
+          "time": 0.67166668176651
+        },
+        {
+          "kind": "keyframe",
+          "name": "LeftFootDown",
+          "time": 0.6770833134651184
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Movement.Human.Jump",
+      "name": "Jump",
+      "assetId": "9839842355",
+      "durationSeconds": 0.550000011920929,
+      "events": [
+        {
+          "kind": "keyframe",
+          "name": "End",
+          "time": 0.550000011920929
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Movement.Human.Fall",
+      "name": "Fall",
+      "assetId": "107757099019069",
+      "durationSeconds": 0.6499999761581421,
+      "events": [
+        {
+          "kind": "keyframe",
+          "name": "End",
+          "time": 0.6499999761581421
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Movement.Human.Climb",
+      "name": "Climb",
+      "assetId": "9831632466",
+      "durationSeconds": 0.4583333432674408,
+      "events": [
+        {
+          "kind": "keyframe",
+          "name": "End",
+          "time": 0.44999998807907104
+        },
+        {
+          "kind": "keyframe",
+          "name": "KF0.45833298563957",
+          "time": 0.4583333432674408
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Movement.Human.Sit",
+      "name": "Sit",
+      "assetId": "178130996",
+      "durationSeconds": 2,
+      "events": [
+        {
+          "kind": "keyframe",
+          "name": "KF2",
+          "time": 2
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Movement.Human.AttackIdle",
+      "name": "AttackIdle",
+      "assetId": "9873286798",
+      "durationSeconds": 0.30000001192092896,
+      "events": [
+        {
+          "kind": "keyframe",
+          "name": "KF0.3",
+          "time": 0.30000001192092896
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Movement.Human.ChatIdle1",
+      "name": "ChatIdle1",
+      "assetId": "8295520005",
+      "durationSeconds": 2.9833333492279053,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Movement.Human.ChatIdle2",
+      "name": "ChatIdle2",
+      "assetId": "8295520005",
+      "durationSeconds": 2.9833333492279053,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Movement.Human.Run",
+      "name": "Run",
+      "assetId": "9839879425",
+      "durationSeconds": 0.6499999761581421,
+      "events": [
+        {
+          "kind": "keyframe",
+          "name": "LeftFootDown",
+          "time": 0.2666666805744171
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "LeftFootDown",
+          "time": 0.2666666805744171
+        },
+        {
+          "kind": "keyframe",
+          "name": "RightFootDown",
+          "time": 0.5833333134651184
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "RightFootDown",
+          "time": 0.5833333134651184
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Movement.Human.DefaultIdle",
+      "name": "DefaultIdle",
+      "assetId": "18910040255",
+      "durationSeconds": 2,
+      "events": [
+        {
+          "kind": "keyframe",
+          "name": "End",
+          "time": 2
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Movement.LowHealth",
+      "name": "LowHealth",
+      "assetId": "8359106912",
+      "durationSeconds": 2.6500000953674316,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Movement.Roll_Front",
+      "name": "Roll_Front",
+      "assetId": "9839887338",
+      "durationSeconds": 0.5333333611488342,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Movement.Roll_Left",
+      "name": "Roll_Left",
+      "assetId": "84459500782691",
+      "durationSeconds": 0.5166666507720947,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Movement.Roll_Right",
+      "name": "Roll_Right",
+      "assetId": "88706515645638",
+      "durationSeconds": 0.5166666507720947,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Movement.Roll_Back",
+      "name": "Roll_Back",
+      "assetId": "9839892259",
+      "durationSeconds": 0.5333333611488342,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Movement.SoftLanding",
+      "name": "SoftLanding",
+      "assetId": "9839946429",
+      "durationSeconds": 0.4333333373069763,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Movement.Landing",
+      "name": "Landing",
+      "assetId": "10432612284",
+      "durationSeconds": 0.30000001192092896,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Movement.DownedMove",
+      "name": "DownedMove",
+      "assetId": "9841377110",
+      "durationSeconds": 1.5166666507720947,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Movement.DownedIdle",
+      "name": "DownedIdle",
+      "assetId": "9841329423",
+      "durationSeconds": 1.5333333015441895,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Movement.SwimIdle",
+      "name": "SwimIdle",
+      "assetId": "9867300737",
+      "durationSeconds": 1.6666666269302368,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Movement.Run.SpearRun",
+      "name": "SpearRun",
+      "assetId": "10028752861",
+      "durationSeconds": 0.6499999761581421,
+      "events": [
+        {
+          "kind": "keyframe",
+          "name": "LeftFootDown",
+          "time": 0.2666666805744171
+        },
+        {
+          "kind": "keyframe",
+          "name": "RightFootUp",
+          "time": 0.3166666626930237
+        },
+        {
+          "kind": "keyframe",
+          "name": "LeftFootDown",
+          "time": 0.44999998807907104
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Movement.Run.RapierRun",
+      "name": "RapierRun",
+      "assetId": "10028752861",
+      "durationSeconds": 0.6499999761581421,
+      "events": [
+        {
+          "kind": "keyframe",
+          "name": "LeftFootDown",
+          "time": 0.2666666805744171
+        },
+        {
+          "kind": "keyframe",
+          "name": "RightFootUp",
+          "time": 0.3166666626930237
+        },
+        {
+          "kind": "keyframe",
+          "name": "LeftFootDown",
+          "time": 0.44999998807907104
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Movement.Run.GreatswordRun",
+      "name": "GreatswordRun",
+      "assetId": "11159096970",
+      "durationSeconds": 0.6499999761581421,
+      "events": [
+        {
+          "kind": "keyframe",
+          "name": "LeftFootDown",
+          "time": 0.2666666805744171
+        },
+        {
+          "kind": "keyframe",
+          "name": "RightFootDown",
+          "time": 0.5833333134651184
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Movement.Run.DaggerRun",
+      "name": "DaggerRun",
+      "assetId": "10028752861",
+      "durationSeconds": 0.6499999761581421,
+      "events": [
+        {
+          "kind": "keyframe",
+          "name": "LeftFootDown",
+          "time": 0.2666666805744171
+        },
+        {
+          "kind": "keyframe",
+          "name": "RightFootUp",
+          "time": 0.3166666626930237
+        },
+        {
+          "kind": "keyframe",
+          "name": "LeftFootDown",
+          "time": 0.44999998807907104
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Movement.Run.SwordRun",
+      "name": "SwordRun",
+      "assetId": "10028752861",
+      "durationSeconds": 0.6499999761581421,
+      "events": [
+        {
+          "kind": "keyframe",
+          "name": "LeftFootDown",
+          "time": 0.2666666805744171
+        },
+        {
+          "kind": "keyframe",
+          "name": "RightFootUp",
+          "time": 0.3166666626930237
+        },
+        {
+          "kind": "keyframe",
+          "name": "LeftFootDown",
+          "time": 0.44999998807907104
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Movement.Run.MaceRun",
+      "name": "MaceRun",
+      "assetId": "10028752861",
+      "durationSeconds": 0.6499999761581421,
+      "events": [
+        {
+          "kind": "keyframe",
+          "name": "LeftFootDown",
+          "time": 0.2666666805744171
+        },
+        {
+          "kind": "keyframe",
+          "name": "RightFootUp",
+          "time": 0.3166666626930237
+        },
+        {
+          "kind": "keyframe",
+          "name": "LeftFootDown",
+          "time": 0.44999998807907104
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Movement.Run.KatanaRun",
+      "name": "KatanaRun",
+      "assetId": "14430274114",
+      "durationSeconds": 0.6499999761581421,
+      "events": [
+        {
+          "kind": "keyframe",
+          "name": "LeftFootDown",
+          "time": 0.2666666805744171
+        },
+        {
+          "kind": "keyframe",
+          "name": "RightFootUp",
+          "time": 0.3166666626930237
+        },
+        {
+          "kind": "keyframe",
+          "name": "LeftFootDown",
+          "time": 0.44999998807907104
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Movement.Run.TridentRun",
+      "name": "TridentRun",
+      "assetId": "10028752861",
+      "durationSeconds": 0.6499999761581421,
+      "events": [
+        {
+          "kind": "keyframe",
+          "name": "LeftFootDown",
+          "time": 0.2666666805744171
+        },
+        {
+          "kind": "keyframe",
+          "name": "RightFootUp",
+          "time": 0.3166666626930237
+        },
+        {
+          "kind": "keyframe",
+          "name": "LeftFootDown",
+          "time": 0.44999998807907104
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Movement.Run.GreataxeRun",
+      "name": "GreataxeRun",
+      "assetId": "11159096970",
+      "durationSeconds": 0.6499999761581421,
+      "events": [
+        {
+          "kind": "keyframe",
+          "name": "LeftFootDown",
+          "time": 0.2666666805744171
+        },
+        {
+          "kind": "keyframe",
+          "name": "RightFootDown",
+          "time": 0.5833333134651184
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Movement.Run.StaffRun",
+      "name": "StaffRun",
+      "assetId": "10028752861",
+      "durationSeconds": 0.6499999761581421,
+      "events": [
+        {
+          "kind": "keyframe",
+          "name": "LeftFootDown",
+          "time": 0.2666666805744171
+        },
+        {
+          "kind": "keyframe",
+          "name": "RightFootUp",
+          "time": 0.3166666626930237
+        },
+        {
+          "kind": "keyframe",
+          "name": "LeftFootDown",
+          "time": 0.44999998807907104
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Movement.Run.FistRun",
+      "name": "FistRun",
+      "assetId": "9839879425",
+      "durationSeconds": 0.6499999761581421,
+      "events": [
+        {
+          "kind": "keyframe",
+          "name": "LeftFootDown",
+          "time": 0.2666666805744171
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "LeftFootDown",
+          "time": 0.2666666805744171
+        },
+        {
+          "kind": "keyframe",
+          "name": "RightFootDown",
+          "time": 0.5833333134651184
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "RightFootDown",
+          "time": 0.5833333134651184
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Movement.Run.CombatRun",
+      "name": "CombatRun",
+      "assetId": "9839879425",
+      "durationSeconds": 0.6499999761581421,
+      "events": [
+        {
+          "kind": "keyframe",
+          "name": "LeftFootDown",
+          "time": 0.2666666805744171
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "LeftFootDown",
+          "time": 0.2666666805744171
+        },
+        {
+          "kind": "keyframe",
+          "name": "RightFootDown",
+          "time": 0.5833333134651184
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "RightFootDown",
+          "time": 0.5833333134651184
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Movement.Run.ScytheRun",
+      "name": "ScytheRun",
+      "assetId": "113867162227858",
+      "durationSeconds": 1.2999999523162842,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "LeftFootDown",
+          "time": 0.11666666716337204
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "RightFootUp",
+          "time": 0.3499999940395355
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "LeftFootDown",
+          "time": 0.7666666507720947
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "RightFootUp",
+          "time": 1
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Movement.Run.Run",
+      "name": "Run",
+      "assetId": "9839879425",
+      "durationSeconds": 0.6499999761581421,
+      "events": [
+        {
+          "kind": "keyframe",
+          "name": "LeftFootDown",
+          "time": 0.2666666805744171
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "LeftFootDown",
+          "time": 0.2666666805744171
+        },
+        {
+          "kind": "keyframe",
+          "name": "RightFootDown",
+          "time": 0.5833333134651184
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "RightFootDown",
+          "time": 0.5833333134651184
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Movement.Walk.SpearWalk",
+      "name": "SpearWalk",
+      "assetId": "10036138066",
+      "durationSeconds": 1.0770833492279053,
+      "events": [
+        {
+          "kind": "keyframe",
+          "name": "RightFootDown",
+          "time": 0.1691666692495346
+        },
+        {
+          "kind": "keyframe",
+          "name": "LeftFootDown",
+          "time": 0.6154166460037231
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Movement.Walk.RapierWalk",
+      "name": "RapierWalk",
+      "assetId": "10694863437",
+      "durationSeconds": 1.0770833492279053,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Movement.Walk.GreatswordWalk",
+      "name": "GreatswordWalk",
+      "assetId": "11159085440",
+      "durationSeconds": 1.2000000476837158,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Movement.Walk.DaggerWalk",
+      "name": "DaggerWalk",
+      "assetId": "124092318503545",
+      "durationSeconds": 1.0770833492279053,
+      "events": [
+        {
+          "kind": "keyframe",
+          "name": "RightFootDown",
+          "time": 0.18458333611488342
+        },
+        {
+          "kind": "keyframe",
+          "name": "LeftFootDown",
+          "time": 0.6462500095367432
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Movement.Walk.SwordWalk",
+      "name": "SwordWalk",
+      "assetId": "14315368558",
+      "durationSeconds": 1.0770833492279053,
+      "events": [
+        {
+          "kind": "keyframe",
+          "name": "RightFootDown",
+          "time": 0.1691666692495346
+        },
+        {
+          "kind": "keyframe",
+          "name": "LeftFootDown",
+          "time": 0.6154166460037231
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Movement.Walk.MaceWalk",
+      "name": "MaceWalk",
+      "assetId": "13960305579",
+      "durationSeconds": 1.6858333349227905,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Movement.Walk.KatanaWalk",
+      "name": "KatanaWalk",
+      "assetId": "14430204040",
+      "durationSeconds": 1.0770833492279053,
+      "events": [
+        {
+          "kind": "keyframe",
+          "name": "RightFootDown",
+          "time": 0.1691666692495346
+        },
+        {
+          "kind": "keyframe",
+          "name": "LeftFootDown",
+          "time": 0.6154166460037231
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Movement.Walk.TridentWalk",
+      "name": "TridentWalk",
+      "assetId": "10036138066",
+      "durationSeconds": 1.0770833492279053,
+      "events": [
+        {
+          "kind": "keyframe",
+          "name": "RightFootDown",
+          "time": 0.1691666692495346
+        },
+        {
+          "kind": "keyframe",
+          "name": "LeftFootDown",
+          "time": 0.6154166460037231
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Movement.Walk.GreataxeWalk",
+      "name": "GreataxeWalk",
+      "assetId": "11159085440",
+      "durationSeconds": 1.2000000476837158,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Movement.Walk.FistWalk",
+      "name": "FistWalk",
+      "assetId": "87685301669572",
+      "durationSeconds": 1.0770833492279053,
+      "events": [
+        {
+          "kind": "keyframe",
+          "name": "RightFootDown",
+          "time": 0.23083333671092987
+        },
+        {
+          "kind": "keyframe",
+          "name": "LeftFootDown",
+          "time": 0.6770833134651184
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Movement.Walk.StaffWalk",
+      "name": "StaffWalk",
+      "assetId": "10036138066",
+      "durationSeconds": 1.0770833492279053,
+      "events": [
+        {
+          "kind": "keyframe",
+          "name": "RightFootDown",
+          "time": 0.1691666692495346
+        },
+        {
+          "kind": "keyframe",
+          "name": "LeftFootDown",
+          "time": 0.6154166460037231
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Movement.Walk.CombatWalk",
+      "name": "CombatWalk",
+      "assetId": "87685301669572",
+      "durationSeconds": 1.0770833492279053,
+      "events": [
+        {
+          "kind": "keyframe",
+          "name": "RightFootDown",
+          "time": 0.23083333671092987
+        },
+        {
+          "kind": "keyframe",
+          "name": "LeftFootDown",
+          "time": 0.6770833134651184
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Movement.Walk.ScytheWalk",
+      "name": "ScytheWalk",
+      "assetId": "113967409387277",
+      "durationSeconds": 1.2000000476837158,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Movement.NightCharmer.StandIdle",
+      "name": "StandIdle",
+      "assetId": "9839955546",
+      "durationSeconds": 2.6500000953674316,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Movement.NightCharmer.Walk",
+      "name": "Walk",
+      "assetId": "11702677529",
+      "durationSeconds": 1.9666666984558105,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Movement.NightCharmer.Jump",
+      "name": "Jump",
+      "assetId": "9839842355",
+      "durationSeconds": 0.550000011920929,
+      "events": [
+        {
+          "kind": "keyframe",
+          "name": "End",
+          "time": 0.550000011920929
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Movement.NightCharmer.Fall",
+      "name": "Fall",
+      "assetId": "9839850611",
+      "durationSeconds": 0.7333333492279053,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Movement.NightCharmer.Climb",
+      "name": "Climb",
+      "assetId": "9831632466",
+      "durationSeconds": 0.4583333432674408,
+      "events": [
+        {
+          "kind": "keyframe",
+          "name": "End",
+          "time": 0.44999998807907104
+        },
+        {
+          "kind": "keyframe",
+          "name": "KF0.45833298563957",
+          "time": 0.4583333432674408
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Movement.NightCharmer.Run",
+      "name": "Run",
+      "assetId": "9839879425",
+      "durationSeconds": 0.6499999761581421,
+      "events": [
+        {
+          "kind": "keyframe",
+          "name": "LeftFootDown",
+          "time": 0.2666666805744171
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "LeftFootDown",
+          "time": 0.2666666805744171
+        },
+        {
+          "kind": "keyframe",
+          "name": "RightFootDown",
+          "time": 0.5833333134651184
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "RightFootDown",
+          "time": 0.5833333134651184
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Movement.LevitatingIdle",
+      "name": "LevitatingIdle",
+      "assetId": "14917713673",
+      "durationSeconds": 1.9666666984558105,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Movement.KneeDownIdle",
+      "name": "KneeDownIdle",
+      "assetId": "14919979619",
+      "durationSeconds": 0,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Movement.GreatswordTwoHand",
+      "name": "GreatswordTwoHand",
+      "assetId": "14919944680",
+      "durationSeconds": 0,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Movement.Roll_Air",
+      "name": "Roll_Air",
+      "assetId": "132146135472531",
+      "durationSeconds": 0.3166666626930237,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Movement.Sliding",
+      "name": "Sliding",
+      "assetId": "77070708677985",
+      "durationSeconds": 0,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Movement.WallBounce",
+      "name": "WallBounce",
+      "assetId": "18186876507",
+      "durationSeconds": 0.36666667461395264,
+      "events": [
+        {
+          "kind": "keyframe",
+          "name": "KeyName",
+          "time": 0
+        },
+        {
+          "kind": "keyframe",
+          "name": "KF0.60000002384186",
+          "time": 0.36666667461395264
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Movement.ClimbUp",
+      "name": "ClimbUp",
+      "assetId": "9839904022",
+      "durationSeconds": 0.46666666865348816,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Movement.Vault",
+      "name": "Vault",
+      "assetId": "18186354801",
+      "durationSeconds": 0.8333333134651184,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Movement.ClimbLedge",
+      "name": "ClimbLedge",
+      "assetId": "18186941606",
+      "durationSeconds": 0.4000000059604645,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Movement.CrouchIdle",
+      "name": "CrouchIdle",
+      "assetId": "10080413418",
+      "durationSeconds": 2.6500000953674316,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Movement.CrouchWalk",
+      "name": "CrouchWalk",
+      "assetId": "10080417512",
+      "durationSeconds": 1.3333333730697632,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Hit.Downed",
+      "name": "Downed",
+      "assetId": "15570676422",
+      "durationSeconds": 0,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Hit.Dizzy",
+      "name": "Dizzy",
+      "assetId": "8359147244",
+      "durationSeconds": 2.5,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Hit.Parried",
+      "name": "Parried",
+      "assetId": "10059485766",
+      "durationSeconds": 0.4166666567325592,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Hit.ParriedAlternative",
+      "name": "ParriedAlternative",
+      "assetId": "10059604057",
+      "durationSeconds": 0.4166666567325592,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Hit.Grabbed",
+      "name": "Grabbed",
+      "assetId": "11480400857",
+      "durationSeconds": 1.5666667222976685,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Hit.Knockback",
+      "name": "Knockback",
+      "assetId": "12955148621",
+      "durationSeconds": 0.8666666746139526,
+      "events": [
+        {
+          "kind": "keyframe",
+          "name": "HitWindow",
+          "time": 0.7166666388511658
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Hit.Boar.FlinchRight",
+      "name": "FlinchRight",
+      "assetId": "13756060730",
+      "durationSeconds": 1,
+      "events": [
+        {
+          "kind": "keyframe",
+          "name": "End",
+          "time": 1
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Hit.Boar.FlinchLeft",
+      "name": "FlinchLeft",
+      "assetId": "13756199097",
+      "durationSeconds": 1,
+      "events": [
+        {
+          "kind": "keyframe",
+          "name": "End",
+          "time": 1
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Hit.FlinchLeft",
+      "name": "FlinchLeft",
+      "assetId": "100970712574451",
+      "durationSeconds": 0.6499999761581421,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Hit.FlinchRight",
+      "name": "FlinchRight",
+      "assetId": "130310470361406",
+      "durationSeconds": 0.75,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Hit.PlayerGrabbed",
+      "name": "PlayerGrabbed",
+      "assetId": "13908613303",
+      "durationSeconds": 4.0333333015441895,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Hit.PlayerImpaled",
+      "name": "PlayerImpaled",
+      "assetId": "14850287020",
+      "durationSeconds": 0,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Hit.Knocked",
+      "name": "Knocked",
+      "assetId": "15570676422",
+      "durationSeconds": 0,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Hit.Detained",
+      "name": "Detained",
+      "assetId": "15668913149",
+      "durationSeconds": 0,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Hit.KickVictim",
+      "name": "KickVictim",
+      "assetId": "102942000509372",
+      "durationSeconds": 0.8999999761581421,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Combat.HammerDown",
+      "name": "HammerDown",
+      "assetId": "8314692364",
+      "durationSeconds": 0.5,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Combat.HeavyPunch",
+      "name": "HeavyPunch",
+      "assetId": "8594363819",
+      "durationSeconds": 0.7666666507720947,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.6000000238418579
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Combat.AerialKickUp",
+      "name": "AerialKickUp",
+      "assetId": "9757167816",
+      "durationSeconds": 0.8999999761581421,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.25
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Combat.AerialKickDown",
+      "name": "AerialKickDown",
+      "assetId": "9757223208",
+      "durationSeconds": 0.8999999761581421,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Combat.ChokeGrab",
+      "name": "ChokeGrab",
+      "assetId": "11254946683",
+      "durationSeconds": 1.5666667222976685,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Combat.GrabLunge",
+      "name": "GrabLunge",
+      "assetId": "11469887779",
+      "durationSeconds": 2.4000000953674316,
+      "events": [
+        {
+          "kind": "keyframe",
+          "name": "HitWindow",
+          "time": 1.1166666746139526
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Combat.UpwardPalm",
+      "name": "UpwardPalm",
+      "assetId": "14450433743",
+      "durationSeconds": 1.0333333015441895,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "MagicCircle",
+          "time": 0.23333333432674408
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "Palm",
+          "time": 0.4333333373069763
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Skills.BurstPistol",
+      "name": "BurstPistol",
+      "assetId": "12671888495",
+      "durationSeconds": 1.1166666746139526,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "WindUp",
+          "time": 0.6833333373069763
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Skills.FireStomp",
+      "name": "FireStomp",
+      "assetId": "12687752087",
+      "durationSeconds": 0.8333333134651184,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "WindUp",
+          "time": 0.4833333194255829
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.6333333253860474
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Skills.ScorchingBarrage",
+      "name": "ScorchingBarrage",
+      "assetId": "12709977831",
+      "durationSeconds": 1.4333332777023315,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "WindUp",
+          "time": 0.6000000238418579
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Skills.GaleRupture",
+      "name": "GaleRupture",
+      "assetId": "84889290807745",
+      "durationSeconds": 0.9666666388511658,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.6666666865348816
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Skills.PiercingFlurry",
+      "name": "PiercingFlurry",
+      "assetId": "13990394139",
+      "durationSeconds": 1.9199999570846558,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "DoSkill",
+          "time": 0.6000000238418579
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "FinalStrike",
+          "time": 1.5199999809265137
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Skills.VerticalStrike",
+      "name": "VerticalStrike",
+      "assetId": "13990348548",
+      "durationSeconds": 1.159999966621399,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "DoSkill",
+          "time": 0.6800000071525574
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "Slam",
+          "time": 0.8799999952316284
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Skills.VaultBreaker",
+      "name": "VaultBreaker",
+      "assetId": "13990295202",
+      "durationSeconds": 1.3200000524520874,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "DoSkill",
+          "time": 0.7599999904632568
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Skills.RelentlessRush",
+      "name": "RelentlessRush",
+      "assetId": "13990268150",
+      "durationSeconds": 1.440000057220459,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "DoSkill",
+          "time": 0.47999998927116394
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "SpinWindow2",
+          "time": 0.800000011920929
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "FinalStrike",
+          "time": 1.0800000429153442
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Skills.Cyclone",
+      "name": "Cyclone",
+      "assetId": "13990437059",
+      "durationSeconds": 1.8333333730697632,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "DoSkill",
+          "time": 0.5333333611488342
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "SpinWindow",
+          "time": 0.6333333253860474
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "SpinWindow",
+          "time": 0.800000011920929
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "SpinWindow",
+          "time": 1
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "SpinWindow",
+          "time": 1.1333333253860474
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "SpinEnded",
+          "time": 1.1666666269302368
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Skills.Flourish",
+      "name": "Flourish",
+      "assetId": "14056852710",
+      "durationSeconds": 1.2000000476837158,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "Slash",
+          "time": 0.2750000059604645
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "Strike",
+          "time": 0.75
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Skills.BladeThrust",
+      "name": "BladeThrust",
+      "assetId": "14452988294",
+      "durationSeconds": 1.1200000047683716,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "AllowFeint",
+          "time": 0.36000001430511475
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.800000011920929
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Skills.Tornado",
+      "name": "Tornado",
+      "assetId": "14438202242",
+      "durationSeconds": 1.399999976158142,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "StartWindup",
+          "time": 0.4570833444595337
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "Release",
+          "time": 1.028749942779541
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Skills.TempestPalm",
+      "name": "TempestPalm",
+      "assetId": "14450307160",
+      "durationSeconds": 0.8999999761581421,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.6666666865348816
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Skills.TempestBlade",
+      "name": "TempestBlade",
+      "assetId": "14479235322",
+      "durationSeconds": 1.2333333492279053,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.8666666746139526
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Skills.ArrowVolley",
+      "name": "ArrowVolley",
+      "assetId": "14865075808",
+      "durationSeconds": 2.240000009536743,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "ShootWindow",
+          "time": 1.6799999475479126
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Skills.VoltSurge",
+      "name": "VoltSurge",
+      "assetId": "16456073067",
+      "durationSeconds": 1.375,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "WindUp",
+          "time": 0.375
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Skills.Snap",
+      "name": "Snap",
+      "assetId": "15671883283",
+      "durationSeconds": 0.625,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "Action",
+          "time": 0.3333333432674408
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Skills.SlashesOfLight",
+      "name": "SlashesOfLight",
+      "assetId": "9666453960",
+      "durationSeconds": 0.38333332538604736,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Skills.LightningBarrage",
+      "name": "LightningBarrage",
+      "assetId": "9093819642",
+      "durationSeconds": 0.30000001192092896,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Skills.RushingTempest",
+      "name": "RushingTempest",
+      "assetId": "9557400534",
+      "durationSeconds": 1.1333333253860474,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "StartLunge",
+          "time": 0.3166666626930237
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "ActionFrame",
+          "time": 0.3499999940395355
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "ValidEnd",
+          "time": 0.699999988079071
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Skills.Updraft",
+      "name": "Updraft",
+      "assetId": "97806594512867",
+      "durationSeconds": 1.25,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "BeginRelease",
+          "time": 0.4833333194255829
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "Jump",
+          "time": 0.6499999761581421
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Skills.KickUp",
+      "name": "KickUp",
+      "assetId": "76343258849163",
+      "durationSeconds": 0.6499999761581421,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.38333332538604736
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Skills.PalmThrustNormal",
+      "name": "PalmThrustNormal",
+      "assetId": "120859667959635",
+      "durationSeconds": 1.100000023841858,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.800000011920929
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Skills.EnGarde",
+      "name": "EnGarde",
+      "assetId": "121366593881808",
+      "durationSeconds": 1.6666666269302368,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Skills.MeteorKick",
+      "name": "MeteorKick",
+      "assetId": "84025524847215",
+      "durationSeconds": 1.2666666507720947,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.4833333194255829
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "EndVelocity",
+          "time": 0.7833333611488342
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Skills.RendingSlash",
+      "name": "RendingSlash",
+      "assetId": "131567006787701",
+      "durationSeconds": 0.9333333373069763,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "Velocity",
+          "time": 0.44999998807907104
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.7833333611488342
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Skills.Conviction",
+      "name": "Conviction",
+      "assetId": "114221502866879",
+      "durationSeconds": 0.949999988079071,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.5333333611488342
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Skills.DarkHaste",
+      "name": "DarkHaste",
+      "assetId": "12948865998",
+      "durationSeconds": 1.5666667222976685,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "WindUp",
+          "time": 0.30000001192092896
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "Action",
+          "time": 0.699999988079071
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "Impact",
+          "time": 1
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Skills.Dash",
+      "name": "Dash",
+      "assetId": "126637760994593",
+      "durationSeconds": 0.8666666746139526,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "Velocity",
+          "time": 0.3333333432674408
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Skills.Dive",
+      "name": "Dive",
+      "assetId": "124258860936525",
+      "durationSeconds": 0.9833333492279053,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "Leap",
+          "time": 0.01666666753590107
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "Descent",
+          "time": 0.4833333194255829
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "FrameBeforeImpact",
+          "time": 0.6833333373069763
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Skills.Annihilation",
+      "name": "Annihilation",
+      "assetId": "8533862303",
+      "durationSeconds": 1.1666666269302368,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Skills.ThunderStrike",
+      "name": "ThunderStrike",
+      "assetId": "9239589545",
+      "durationSeconds": 0.8333333134651184,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "Rise",
+          "time": 0.18333333730697632
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "Launch",
+          "time": 0.3333333432674408
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Skills.ElectroBeam",
+      "name": "ElectroBeam",
+      "assetId": "9239619290",
+      "durationSeconds": 0.8999999761581421,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.4833333194255829
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Skills.DragonImpact",
+      "name": "DragonImpact",
+      "assetId": "9239657975",
+      "durationSeconds": 1.1666666269302368,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.5666666626930237
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Skills.BlindingRush",
+      "name": "BlindingRush",
+      "assetId": "9557400534",
+      "durationSeconds": 1.1333333253860474,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "StartLunge",
+          "time": 0.3166666626930237
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "ActionFrame",
+          "time": 0.3499999940395355
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "ValidEnd",
+          "time": 0.699999988079071
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Skills.FallingLance",
+      "name": "FallingLance",
+      "assetId": "8533862303",
+      "durationSeconds": 1.1666666269302368,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Skills.Howling Slash",
+      "name": "Howling Slash",
+      "assetId": "76118361445272",
+      "durationSeconds": 0.5833333134651184,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "Slash",
+          "time": 0.2829166650772095
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Skills.WindUltimate",
+      "name": "WindUltimate",
+      "assetId": "76052397198343",
+      "durationSeconds": 1.7666666507720947,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "BowSummon",
+          "time": 0.15000000596046448
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "Shoot",
+          "time": 1.350000023841858
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Skills.LightningUltimate",
+      "name": "LightningUltimate",
+      "assetId": "80361376431169",
+      "durationSeconds": 1.5833333730697632,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "Leap",
+          "time": 0.3333333432674408
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "Beam",
+          "time": 0.8333333134651184
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Skills.LightUltimate",
+      "name": "LightUltimate",
+      "assetId": "89295643927067",
+      "durationSeconds": 2.4666666984558105,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "Summon",
+          "time": 0.13333334028720856
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "Charged",
+          "time": 0.9333333373069763
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "Explosion",
+          "time": 1.649999976158142
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Skills.FlameUltimate",
+      "name": "FlameUltimate",
+      "assetId": "108546548680913",
+      "durationSeconds": 1.3833333253860474,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "Start",
+          "time": 0.0833333358168602
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "Charge",
+          "time": 0.15000000596046448
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "Throw",
+          "time": 0.6499999761581421
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Skills.ShadowUltimate",
+      "name": "ShadowUltimate",
+      "assetId": "127378047230118",
+      "durationSeconds": 2.366666555404663,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "Start",
+          "time": 0.15000000596046448
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "Attack1",
+          "time": 0.5166666507720947
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "Attack2",
+          "time": 0.9166666865348816
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "Attack3",
+          "time": 1.3666666746139526
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "Attack4",
+          "time": 1.7000000476837158
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Skills.VitalPulse",
+      "name": "VitalPulse",
+      "assetId": "104174247581463",
+      "durationSeconds": 2.5,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "Start",
+          "time": 0.13333334028720856
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "Heal",
+          "time": 1.8333333730697632
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Skills.ChargedStrike",
+      "name": "ChargedStrike",
+      "assetId": "82645141726816",
+      "durationSeconds": 1.0833333730697632,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "Charge",
+          "time": 0.15000000596046448
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "Strike",
+          "time": 0.5833333134651184
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Skills.Rampage",
+      "name": "Rampage",
+      "assetId": "97749185835376",
+      "durationSeconds": 2.5833332538604736,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "Windup",
+          "time": 0.7333333492279053
+        },
+        {
+          "kind": "keyframe",
+          "name": "Jump",
+          "time": 1.7166666984558105
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "Jump",
+          "time": 1.7166666984558105
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "Impact",
+          "time": 2.299999952316284
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Skills.TimeUltimate",
+      "name": "TimeUltimate",
+      "assetId": "72107940559330",
+      "durationSeconds": 1.100000023841858,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "Summon",
+          "time": 0.30000001192092896
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "Fire",
+          "time": 1.100000023841858
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Misc.LeftDodge",
+      "name": "LeftDodge",
+      "assetId": "8495698342",
+      "durationSeconds": 0.3499999940395355,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Misc.RightDodge",
+      "name": "RightDodge",
+      "assetId": "8495708006",
+      "durationSeconds": 0.3499999940395355,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Misc.BackDodge",
+      "name": "BackDodge",
+      "assetId": "8502285198",
+      "durationSeconds": 0.3499999940395355,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Misc.Parry",
+      "name": "Parry",
+      "assetId": "14417052527",
+      "durationSeconds": 0.1666666716337204,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Misc.RollCancelRight",
+      "name": "RollCancelRight",
+      "assetId": "93087728991591",
+      "durationSeconds": 0.3166666626930237,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Misc.ParryLeft",
+      "name": "ParryLeft",
+      "assetId": "13355016261",
+      "durationSeconds": 0.5,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Misc.ParryRight",
+      "name": "ParryRight",
+      "assetId": "13355019718",
+      "durationSeconds": 0.5,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Misc.Mining",
+      "name": "Mining",
+      "assetId": "13535003664",
+      "durationSeconds": 1.1666666269302368,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "Action",
+          "time": 0.5
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Misc.Throw",
+      "name": "Throw",
+      "assetId": "81475769598014",
+      "durationSeconds": 0.800000011920929,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "Throw",
+          "time": 0.550000011920929
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Misc.Harvesting",
+      "name": "Harvesting",
+      "assetId": "113938257124230",
+      "durationSeconds": 0.9833333492279053,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "Action",
+          "time": 0.06666667014360428
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Misc.RollCancelLeft",
+      "name": "RollCancelLeft",
+      "assetId": "132555387434309",
+      "durationSeconds": 0.3166666626930237,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Misc.MiningIdle",
+      "name": "MiningIdle",
+      "assetId": "107756097095499",
+      "durationSeconds": 2,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Misc.HarvestingIdle",
+      "name": "HarvestingIdle",
+      "assetId": "120099311223020",
+      "durationSeconds": 0,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Carry",
+      "name": "Carry",
+      "assetId": "8530051817",
+      "durationSeconds": 0,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Carried",
+      "name": "Carried",
+      "assetId": "8530055602",
+      "durationSeconds": 1.5,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Executions.Executed",
+      "name": "Executed",
+      "assetId": "8530065322",
+      "durationSeconds": 0.01666666753590107,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Executions.BoarExecute",
+      "name": "BoarExecute",
+      "assetId": "13980557806",
+      "durationSeconds": 2.0799999237060547,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.800000011920929
+        },
+        {
+          "kind": "keyframe",
+          "name": "End",
+          "time": 2.0799999237060547
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Executions.Blunt.CombatExecuting",
+      "name": "CombatExecuting",
+      "assetId": "8530061235",
+      "durationSeconds": 5.316666603088379,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 2.0166666507720947
+        },
+        {
+          "kind": "keyframe",
+          "name": "HitWindow",
+          "time": 2.2166666984558105
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Executions.Blade.DaggerExecuting",
+      "name": "DaggerExecuting",
+      "assetId": "138081761812078",
+      "durationSeconds": 2.0333333015441895,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 1.2000000476837158
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Executions.Blade.GreatswordExecuting",
+      "name": "GreatswordExecuting",
+      "assetId": "18723574275",
+      "durationSeconds": 2.4000000953674316,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.9833333492279053
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Executions.Blade.KatanaExecuting",
+      "name": "KatanaExecuting",
+      "assetId": "19000703266",
+      "durationSeconds": 2.9000000953674316,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.9666666388511658
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Executions.Blade.RapierExecuting",
+      "name": "RapierExecuting",
+      "assetId": "10696603770",
+      "durationSeconds": 5.333333492279053,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 1.9500000476837158
+        },
+        {
+          "kind": "keyframe",
+          "name": "HitWindow",
+          "time": 2.0999999046325684
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Executions.Blade.SpearExecuting",
+      "name": "SpearExecuting",
+      "assetId": "10067329531",
+      "durationSeconds": 5.316666603088379,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 2.0166666507720947
+        },
+        {
+          "kind": "keyframe",
+          "name": "HitWindow",
+          "time": 2.066666603088379
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Executions.Blade.SwordExecuting",
+      "name": "SwordExecuting",
+      "assetId": "10696603770",
+      "durationSeconds": 5.333333492279053,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 1.9500000476837158
+        },
+        {
+          "kind": "keyframe",
+          "name": "HitWindow",
+          "time": 2.0999999046325684
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Executions.Blade.TridentExecuting",
+      "name": "TridentExecuting",
+      "assetId": "10067329531",
+      "durationSeconds": 5.316666603088379,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 2.0166666507720947
+        },
+        {
+          "kind": "keyframe",
+          "name": "HitWindow",
+          "time": 2.066666603088379
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Executions.Blade.GreataxeExecuting",
+      "name": "GreataxeExecuting",
+      "assetId": "18723574275",
+      "durationSeconds": 2.4000000953674316,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.9833333492279053
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Executions.LizardBossExecute",
+      "name": "LizardBossExecute",
+      "assetId": "73042737238490",
+      "durationSeconds": 1.8333333730697632,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.6333333253860474
+        },
+        {
+          "kind": "keyframe",
+          "name": "End",
+          "time": 1.8333333730697632
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Executions.MushknightExecute",
+      "name": "MushknightExecute",
+      "assetId": "73042737238490",
+      "durationSeconds": 1.8333333730697632,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.6333333253860474
+        },
+        {
+          "kind": "keyframe",
+          "name": "End",
+          "time": 1.8333333730697632
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Items.PotionDrinking",
+      "name": "PotionDrinking",
+      "assetId": "9781568458",
+      "durationSeconds": 1.4666666984558105,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Items.ToolHold",
+      "name": "ToolHold",
+      "assetId": "16021897343",
+      "durationSeconds": 0.5,
+      "events": [
+        {
+          "kind": "keyframe",
+          "name": "End",
+          "time": 0.5
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Items.Bandaging",
+      "name": "Bandaging",
+      "assetId": "9781745916",
+      "durationSeconds": 0.4833333194255829,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Items.BookHold",
+      "name": "BookHold",
+      "assetId": "11164177388",
+      "durationSeconds": 0,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Thinking",
+      "name": "Thinking",
+      "assetId": "10697403133",
+      "durationSeconds": 13.316666603088379,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.GrimoireAnimations.Idle",
+      "name": "Idle",
+      "assetId": "115702731975285",
+      "durationSeconds": 1,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.GrimoireAnimations.Open",
+      "name": "Open",
+      "assetId": "134568603422487",
+      "durationSeconds": 0.9666666388511658,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "End",
+          "time": 0.5
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.GrimoireAnimations.TimeIdle",
+      "name": "TimeIdle",
+      "assetId": "109745531212190",
+      "durationSeconds": 5,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.GrimoireReceive",
+      "name": "GrimoireReceive",
+      "assetId": "10425029023",
+      "durationSeconds": 2.6500000953674316,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.CarryBox",
+      "name": "CarryBox",
+      "assetId": "14147348381",
+      "durationSeconds": 0,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Emotes.EmotePack2.Loser",
+      "name": "Loser",
+      "assetId": "17350942315",
+      "durationSeconds": 0.699999988079071,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Emotes.EmotePack2.Slide",
+      "name": "Slide",
+      "assetId": "17350993980",
+      "durationSeconds": 0.699999988079071,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Emotes.Laugh",
+      "name": "Laugh",
+      "assetId": "17350660770",
+      "durationSeconds": 2.644583225250244,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Emotes.Salute",
+      "name": "Salute",
+      "assetId": "17350646251",
+      "durationSeconds": 1.6333333253860474,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Emotes.Sit",
+      "name": "Sit",
+      "assetId": "18633410020",
+      "durationSeconds": 4,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Emotes.Spit",
+      "name": "Spit",
+      "assetId": "10529398013",
+      "durationSeconds": 0.6499999761581421,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Emotes.Thinking",
+      "name": "Thinking",
+      "assetId": "17345777089",
+      "durationSeconds": 13.333333015441895,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Emotes.EmotePack1.Jojo Dance",
+      "name": "Jojo Dance",
+      "assetId": "10695602175",
+      "durationSeconds": 5.666666507720947,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Emotes.EmotePack1.Dio",
+      "name": "Dio",
+      "assetId": "10695611644",
+      "durationSeconds": 2.6500000953674316,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Emotes.EmotePack1.Cool Point",
+      "name": "Cool Point",
+      "assetId": "10695609033",
+      "durationSeconds": 2.9166667461395264,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Emotes.EmotePack1.Flashy Poses",
+      "name": "Flashy Poses",
+      "assetId": "10695605920",
+      "durationSeconds": 1.600000023841858,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Emotes.EmotePack1.Silly Dance",
+      "name": "Silly Dance",
+      "assetId": "10695589488",
+      "durationSeconds": 2.7333333492279053,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Emotes.EmotePack1.Flex",
+      "name": "Flex",
+      "assetId": "10695592840",
+      "durationSeconds": 4.5,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Emotes.Kneel",
+      "name": "Kneel",
+      "assetId": "16270943591",
+      "durationSeconds": 0.4000000059604645,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Emotes.Meditate",
+      "name": "Meditate",
+      "assetId": "14264075211",
+      "durationSeconds": 0,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Rigs.HandIdle",
+      "name": "HandIdle",
+      "assetId": "17224517060",
+      "durationSeconds": 3.2916667461395264,
+      "events": [
+        {
+          "kind": "keyframe",
+          "name": "End",
+          "time": 3.2916667461395264
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Rigs.ShadowBeam",
+      "name": "ShadowBeam",
+      "assetId": "17211441225",
+      "durationSeconds": 0.7729166746139526,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "Windup",
+          "time": 0.22708334028720856
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.4091666638851166
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Blocks.Fist_Block",
+      "name": "Fist_Block",
+      "assetId": "8320172789",
+      "durationSeconds": 1.25,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Blocks.Greataxe_Block",
+      "name": "Greataxe_Block",
+      "assetId": "87707218525575",
+      "durationSeconds": 1.6666666269302368,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Blocks.Greatsword_Block",
+      "name": "Greatsword_Block",
+      "assetId": "87707218525575",
+      "durationSeconds": 1.6666666269302368,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Blocks.Rapier_Block",
+      "name": "Rapier_Block",
+      "assetId": "14282102053",
+      "durationSeconds": 0,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Blocks.Spear_Block",
+      "name": "Spear_Block",
+      "assetId": "87707218525575",
+      "durationSeconds": 1.6666666269302368,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Blocks.Staff_Block",
+      "name": "Staff_Block",
+      "assetId": "87707218525575",
+      "durationSeconds": 1.6666666269302368,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Blocks.Sword_Block",
+      "name": "Sword_Block",
+      "assetId": "122934392159414",
+      "durationSeconds": 1.6666666269302368,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Blocks.Katana_Block",
+      "name": "Katana_Block",
+      "assetId": "14282102053",
+      "durationSeconds": 0,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Blocks.Trident_Block",
+      "name": "Trident_Block",
+      "assetId": "87707218525575",
+      "durationSeconds": 1.6666666269302368,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Blocks.Combat_Block",
+      "name": "Combat_Block",
+      "assetId": "8320172789",
+      "durationSeconds": 1.25,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Blocks.Dagger_Block",
+      "name": "Dagger_Block",
+      "assetId": "14282102053",
+      "durationSeconds": 0,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Blocks.Normal_Block",
+      "name": "Normal_Block",
+      "assetId": "8320172789",
+      "durationSeconds": 1.25,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Blocks.Scythe_Block",
+      "name": "Scythe_Block",
+      "assetId": "132097153915447",
+      "durationSeconds": 1.6666666269302368,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Idles.DaggerIdle",
+      "name": "DaggerIdle",
+      "assetId": "105244904534617",
+      "durationSeconds": 2.5,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Idles.GreataxeIdle",
+      "name": "GreataxeIdle",
+      "assetId": "11040563878",
+      "durationSeconds": 0,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Idles.GreatswordIdle",
+      "name": "GreatswordIdle",
+      "assetId": "11040563878",
+      "durationSeconds": 0,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Idles.KatanaIdle",
+      "name": "KatanaIdle",
+      "assetId": "14430099789",
+      "durationSeconds": 0,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Idles.RapierIdle",
+      "name": "RapierIdle",
+      "assetId": "10694850879",
+      "durationSeconds": 0.01666666753590107,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Idles.SpearIdle",
+      "name": "SpearIdle",
+      "assetId": "10017151218",
+      "durationSeconds": 0,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Idles.StaffIdle",
+      "name": "StaffIdle",
+      "assetId": "12808180093",
+      "durationSeconds": 1.9666666984558105,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Idles.SwordIdle",
+      "name": "SwordIdle",
+      "assetId": "12171859350",
+      "durationSeconds": 3,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Idles.TridentIdle",
+      "name": "TridentIdle",
+      "assetId": "10017151218",
+      "durationSeconds": 0,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Idles.FistIdle",
+      "name": "FistIdle",
+      "assetId": "9873286798",
+      "durationSeconds": 0.30000001192092896,
+      "events": [
+        {
+          "kind": "keyframe",
+          "name": "KF0.3",
+          "time": 0.30000001192092896
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Idles.CombatIdle",
+      "name": "CombatIdle",
+      "assetId": "9873286798",
+      "durationSeconds": 0.30000001192092896,
+      "events": [
+        {
+          "kind": "keyframe",
+          "name": "KF0.3",
+          "time": 0.30000001192092896
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Idles.ScytheIdle",
+      "name": "ScytheIdle",
+      "assetId": "89240407551405",
+      "durationSeconds": 2.6666667461395264,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Crit.Elkstrider",
+      "name": "Elkstrider",
+      "assetId": "78707415805986",
+      "durationSeconds": 1.3333333730697632,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "Jump",
+          "time": 0.28333333134651184
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "Slash",
+          "time": 0.800000011920929
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.8166666626930237
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Crit.VenomFang",
+      "name": "VenomFang",
+      "assetId": "113524095169996",
+      "durationSeconds": 2.1666667461395264,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "Dash",
+          "time": 0.6833333373069763
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 1.1666666269302368
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Crit.PrimevalBattleaxe",
+      "name": "PrimevalBattleaxe",
+      "assetId": "117064630778013",
+      "durationSeconds": 2.700000047683716,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 1.0166666507720947
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "CriticalIndicator",
+          "time": 1.4666666984558105
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "PullOut",
+          "time": 1.9333332777023315
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Crit.Cinderblade",
+      "name": "Cinderblade",
+      "assetId": "127837901620547",
+      "durationSeconds": 0.8999999761581421,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "Dash",
+          "time": 0.11666666716337204
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.5333333611488342
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Crit.HeavyGreataxe",
+      "name": "HeavyGreataxe",
+      "assetId": "17564283859",
+      "durationSeconds": 0.3199999928474426,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "StartSpin",
+          "time": 0
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.03999999910593033
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Crit.HeavyTrident",
+      "name": "HeavyTrident",
+      "assetId": "14850217335",
+      "durationSeconds": 3.5779166221618652,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "GrabWindow",
+          "time": 1.1779166460037231
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "SlamWindow",
+          "time": 2.777916669845581
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Crit.Elderthorne",
+      "name": "Elderthorne",
+      "assetId": "125318199927195",
+      "durationSeconds": 2.049999952316284,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "Dash",
+          "time": 0.5666666626930237
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 1.100000023841858
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 1.6333333253860474
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Crit.Wolfcrest",
+      "name": "Wolfcrest",
+      "assetId": "75098914817505",
+      "durationSeconds": 2.200000047683716,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "Windup",
+          "time": 0.15000000596046448
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "Slash",
+          "time": 1.7666666507720947
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Stagger.Hollowseer",
+      "name": "Hollowseer",
+      "assetId": "82914058969022",
+      "durationSeconds": 2.6666667461395264,
+      "events": [
+        {
+          "kind": "keyframe",
+          "name": "End",
+          "time": 2.6666667461395264
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Stagger.Blightseeker",
+      "name": "Blightseeker",
+      "assetId": "134591539679677",
+      "durationSeconds": 3.3333332538604736,
+      "events": [
+        {
+          "kind": "keyframe",
+          "name": "End",
+          "time": 3.3333332538604736
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Parrys.TwoHand_Parry",
+      "name": "TwoHand_Parry",
+      "assetId": "81682571402531",
+      "durationSeconds": 0.3333333432674408,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Parrys.Medium_Parry",
+      "name": "Medium_Parry",
+      "assetId": "108958175568018",
+      "durationSeconds": 0.38333332538604736,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Parrys.Light_Parry",
+      "name": "Light_Parry",
+      "assetId": "14417052527",
+      "durationSeconds": 0.1666666716337204,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Aerials.Sword",
+      "name": "Sword",
+      "assetId": "85853530330509",
+      "durationSeconds": 0.6166666746139526,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "EndVelocity",
+          "time": 0.3499999940395355
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.4166666567325592
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Aerials.Greatsword",
+      "name": "Greatsword",
+      "assetId": "106122835616423",
+      "durationSeconds": 0.6166666746139526,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "EndVelocity",
+          "time": 0.3333333432674408
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.4333333373069763
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Aerials.Combat",
+      "name": "Combat",
+      "assetId": "81129151966619",
+      "durationSeconds": 0.550000011920929,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "EndVelocity",
+          "time": 0.28333333134651184
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.36666667461395264
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Aerials.Scythe",
+      "name": "Scythe",
+      "assetId": "131449711194289",
+      "durationSeconds": 0.6166666746139526,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "EndVelocity",
+          "time": 0.3333333432674408
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.4333333373069763
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Aerials.Slam",
+      "name": "Slam",
+      "assetId": "16434619660",
+      "durationSeconds": 0.9166666865348816,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "LegUp",
+          "time": 0.3166666626930237
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.46666666865348816
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Broom.Default.Stall",
+      "name": "Stall",
+      "assetId": "13621427142",
+      "durationSeconds": 3,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Broom.Default.Forward",
+      "name": "Forward",
+      "assetId": "13634603521",
+      "durationSeconds": 3,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Broom.Default.Right",
+      "name": "Right",
+      "assetId": "13641513163",
+      "durationSeconds": 3,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Broom.Default.Left",
+      "name": "Left",
+      "assetId": "13641430401",
+      "durationSeconds": 3,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Broom.Mushbroom.Stall",
+      "name": "Stall",
+      "assetId": "115965504538346",
+      "durationSeconds": 0,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Broom.Mushbroom.Left",
+      "name": "Left",
+      "assetId": "115965504538346",
+      "durationSeconds": 0,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Broom.Mushbroom.Right",
+      "name": "Right",
+      "assetId": "115965504538346",
+      "durationSeconds": 0,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Broom.Mushbroom.Forward",
+      "name": "Forward",
+      "assetId": "115965504538346",
+      "durationSeconds": 0,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Broom.Crazy Cyclone.Stall",
+      "name": "Stall",
+      "assetId": "113297787658130",
+      "durationSeconds": 3,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Broom.Crazy Cyclone.Left",
+      "name": "Left",
+      "assetId": "108795185818941",
+      "durationSeconds": 3,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Broom.Crazy Cyclone.Right",
+      "name": "Right",
+      "assetId": "109280341798977",
+      "durationSeconds": 3,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Broom.Crazy Cyclone.Forward",
+      "name": "Forward",
+      "assetId": "113297787658130",
+      "durationSeconds": 3,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Broom.Avatar Glider.Forward",
+      "name": "Forward",
+      "assetId": "130216861713427",
+      "durationSeconds": 1.6666666269302368,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Broom.Avatar Glider.Right",
+      "name": "Right",
+      "assetId": "116214782343706",
+      "durationSeconds": 1.6666666269302368,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Broom.Avatar Glider.Stall",
+      "name": "Stall",
+      "assetId": "139807755784870",
+      "durationSeconds": 2.5,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Broom.Avatar Glider.Left",
+      "name": "Left",
+      "assetId": "98048954823229",
+      "durationSeconds": 1.6666666269302368,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.NPCS.BlightClawAnim",
+      "name": "BlightClawAnim",
+      "assetId": "138780595177276",
+      "durationSeconds": 2.7666666507720947,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "Action",
+          "time": 1.75
+        },
+        {
+          "kind": "keyframe",
+          "name": "End",
+          "time": 2.7666666507720947
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.NPCS.BlightEyeAnim",
+      "name": "BlightEyeAnim",
+      "assetId": "76370649113417",
+      "durationSeconds": 4.050000190734863,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "Hand",
+          "time": 0.699999988079071
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "Orb",
+          "time": 1.4333332777023315
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "Explode",
+          "time": 2.3333332538604736
+        },
+        {
+          "kind": "keyframe",
+          "name": "End",
+          "time": 4.050000190734863
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.NPCS.MushRushAnim",
+      "name": "MushRushAnim",
+      "assetId": "114135137062549",
+      "durationSeconds": 3.7666666507720947,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 1
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "End",
+          "time": 3.4000000953674316
+        },
+        {
+          "kind": "keyframe",
+          "name": "End",
+          "time": 3.7666666507720947
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.NPCS.RootAttackAnim",
+      "name": "RootAttackAnim",
+      "assetId": "122498520268119",
+      "durationSeconds": 2.066666603088379,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "Slam",
+          "time": 0.7666666507720947
+        },
+        {
+          "kind": "keyframe",
+          "name": "End",
+          "time": 2.066666603088379
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.NPCS.AlkeRoar",
+      "name": "AlkeRoar",
+      "assetId": "9922542154",
+      "durationSeconds": 4.800000190734863,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 1.6399999856948853
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.NPCS.DireWolf.Whip Kick",
+      "name": "Whip Kick",
+      "assetId": "115129415528730",
+      "durationSeconds": 4.133333206176758,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "Charge",
+          "time": 0.1599999964237213
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "Attack",
+          "time": 1.1858333349227905
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "Kick",
+          "time": 1.899999976158142
+        },
+        {
+          "kind": "keyframe",
+          "name": "End",
+          "time": 4.133333206176758
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.NPCS.DireWolf.Clawed Attack",
+      "name": "Clawed Attack",
+      "assetId": "78815029207104",
+      "durationSeconds": 2.2333333492279053,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "Charge",
+          "time": 0.23666666448116302
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "Velocity",
+          "time": 0.3916666805744171
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "Attack",
+          "time": 0.5670833587646484
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "Velocity",
+          "time": 1.3166667222976685
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "Attack2",
+          "time": 1.6833332777023315
+        },
+        {
+          "kind": "keyframe",
+          "name": "End",
+          "time": 2.2333333492279053
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.NPCS.DireWolf.Terror Howl",
+      "name": "Terror Howl",
+      "assetId": "89888765605896",
+      "durationSeconds": 3.5999999046325684,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "Charge",
+          "time": 0.10791666805744171
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "Attack",
+          "time": 0.7487499713897705
+        },
+        {
+          "kind": "keyframe",
+          "name": "End",
+          "time": 3.5999999046325684
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.NPCS.DireWolf.Bite Twist",
+      "name": "Bite Twist",
+      "assetId": "114021786029196",
+      "durationSeconds": 2.200000047683716,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "Charge",
+          "time": 0.24833333492279053
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "Attack",
+          "time": 0.5366666913032532
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "Throw",
+          "time": 1.5083333253860474
+        },
+        {
+          "kind": "keyframe",
+          "name": "End",
+          "time": 2.200000047683716
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.NPCS.Wolf.Bite Pounce",
+      "name": "Bite Pounce",
+      "assetId": "124572427631698",
+      "durationSeconds": 1.7333333492279053,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "Charge",
+          "time": 0.23541666567325592
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "Attack",
+          "time": 0.9579166769981384
+        },
+        {
+          "kind": "keyframe",
+          "name": "End",
+          "time": 1.7333333492279053
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.NPCS.Wolf.Tail Sweep",
+      "name": "Tail Sweep",
+      "assetId": "73807165586659",
+      "durationSeconds": 1.6666666269302368,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "Charge",
+          "time": 0.44749999046325684
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "Attack",
+          "time": 1.003749966621399
+        },
+        {
+          "kind": "keyframe",
+          "name": "End",
+          "time": 1.6666666269302368
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.NPCS.AlkeBoss.StandIdle",
+      "name": "StandIdle",
+      "assetId": "16356100194",
+      "durationSeconds": 6.625,
+      "events": [
+        {
+          "kind": "keyframe",
+          "name": "End",
+          "time": 6.625
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.NPCS.AlkeBoss.Walk",
+      "name": "Walk",
+      "assetId": "16361980707",
+      "durationSeconds": 0.9166666865348816,
+      "events": [
+        {
+          "kind": "keyframe",
+          "name": "End",
+          "time": 0.9166666865348816
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.NPCS.AlkeBoss.Jump",
+      "name": "Jump",
+      "assetId": "16992820686",
+      "durationSeconds": 1.8333333730697632,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.4166666567325592
+        },
+        {
+          "kind": "keyframe",
+          "name": "End",
+          "time": 1.8333333730697632
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.NPCS.AlkeBoss.Slam",
+      "name": "Slam",
+      "assetId": "16380529517",
+      "durationSeconds": 3.3333332538604736,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "CriticalIndicator",
+          "time": 1.4166666269302368
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 1.7916666269302368
+        },
+        {
+          "kind": "keyframe",
+          "name": "End",
+          "time": 3.3333332538604736
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.NPCS.AlkeBoss.Screech",
+      "name": "Screech",
+      "assetId": "16386284918",
+      "durationSeconds": 3.3333332538604736,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 1.4166666269302368
+        },
+        {
+          "kind": "keyframe",
+          "name": "End",
+          "time": 3.3333332538604736
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.NPCS.AlkeBoss.Staggered",
+      "name": "Staggered",
+      "assetId": "16787058938",
+      "durationSeconds": 2.0833332538604736,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "Window",
+          "time": 1.625
+        },
+        {
+          "kind": "keyframe",
+          "name": "End",
+          "time": 2.0833332538604736
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.NPCS.AlkeBoss.Bomb",
+      "name": "Bomb",
+      "assetId": "16790816582",
+      "durationSeconds": 3.9166667461395264,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "Charge",
+          "time": 1.0833333730697632
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 2.7083332538604736
+        },
+        {
+          "kind": "keyframe",
+          "name": "End",
+          "time": 3.9166667461395264
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.NPCS.AlkeBoss.RageScreech",
+      "name": "RageScreech",
+      "assetId": "16926676358",
+      "durationSeconds": 3.2916667461395264,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.7916666865348816
+        },
+        {
+          "kind": "keyframe",
+          "name": "End",
+          "time": 3.2916667461395264
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.NPCS.AlkeBoss.Rupture",
+      "name": "Rupture",
+      "assetId": "16933879612",
+      "durationSeconds": 2.9166667461395264,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "CriticalIndicator",
+          "time": 1.25
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "Swing",
+          "time": 1.375
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 1.625
+        },
+        {
+          "kind": "keyframe",
+          "name": "End",
+          "time": 2.9166667461395264
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.NPCS.AlkeBoss.Consecutive",
+      "name": "Consecutive",
+      "assetId": "16786767788",
+      "durationSeconds": 3.2083332538604736,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 1
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 1.2083333730697632
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 1.4583333730697632
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 1.7083333730697632
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 1.9583333730697632
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 2.1666667461395264
+        },
+        {
+          "kind": "keyframe",
+          "name": "End",
+          "time": 3.2083332538604736
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.NPCS.AlkeBoss.Double",
+      "name": "Double",
+      "assetId": "16889541896",
+      "durationSeconds": 3.5833332538604736,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "Swing",
+          "time": 0.75
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.9583333134651184
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "Swing",
+          "time": 2.2083332538604736
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow2",
+          "time": 2.4583332538604736
+        },
+        {
+          "kind": "keyframe",
+          "name": "End",
+          "time": 3.5833332538604736
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.NPCS.AlkeBoss.LeftStrike",
+      "name": "LeftStrike",
+      "assetId": "17049621435",
+      "durationSeconds": 2.2916667461395264,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 1
+        },
+        {
+          "kind": "keyframe",
+          "name": "End",
+          "time": 2.2916667461395264
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.NPCS.AlkeBoss.RightStrike",
+      "name": "RightStrike",
+      "assetId": "17049581150",
+      "durationSeconds": 2.2083332538604736,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 1
+        },
+        {
+          "kind": "keyframe",
+          "name": "End",
+          "time": 2.2083332538604736
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Uppercuts.Uppercut",
+      "name": "Uppercut",
+      "assetId": "75695780896011",
+      "durationSeconds": 0.8833333253860474,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.5
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Magic.Beast.HowlingSlash_1",
+      "name": "HowlingSlash_1",
+      "assetId": "76118361445272",
+      "durationSeconds": 0.5833333134651184,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "Slash",
+          "time": 0.2829166650772095
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Magic.Beast.HowlingSlash_2",
+      "name": "HowlingSlash_2",
+      "assetId": "128758616651183",
+      "durationSeconds": 2,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "Down",
+          "time": 0.3504166603088379
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Magic.Beast.HowlingSlash_3",
+      "name": "HowlingSlash_3",
+      "assetId": "90754805440489",
+      "durationSeconds": 0.44999998807907104,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Magic.Beast.Primal Roar",
+      "name": "Primal Roar",
+      "assetId": "84838159867664",
+      "durationSeconds": 2.299999952316284,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "Spark",
+          "time": 0.16458334028720856
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "Roar",
+          "time": 0.5791666507720947
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "End",
+          "time": 2.0833332538604736
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Magic.Beast.Hunting_1",
+      "name": "Hunting_1",
+      "assetId": "79716963838022",
+      "durationSeconds": 0.6000000238418579,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Magic.Beast.Hunting_2",
+      "name": "Hunting_2",
+      "assetId": "75657651020068",
+      "durationSeconds": 1.0166666507720947,
+      "events": [],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Magic.Beast.Hunting_3",
+      "name": "Hunting_3",
+      "assetId": "129235717372722",
+      "durationSeconds": 0.6499999761581421,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.18333333730697632
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Magic.Beast.Apex Claw",
+      "name": "Apex Claw",
+      "assetId": "124290080499906",
+      "durationSeconds": 0.9166666865348816,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "Slash",
+          "time": 0.4166666567325592
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Magic.Beast.Vicious Assault",
+      "name": "Vicious Assault",
+      "assetId": "140664544166823",
+      "durationSeconds": 1.0166666507720947,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "Slashes",
+          "time": 0.1537500023841858
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "Non_Release",
+          "time": 0.37541666626930237
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "Disperse",
+          "time": 0.5329166650772095
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "Fire",
+          "time": 0.6333333253860474
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "Explosion",
+          "time": 0.9833333492279053
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Magic.Beast.Wild Cleave",
+      "name": "Wild Cleave",
+      "assetId": "98493629825862",
+      "durationSeconds": 1.25,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "Start",
+          "time": 0.2666666805744171
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Magic.Beast.Feral Impact",
+      "name": "Feral Impact",
+      "assetId": "136194022789035",
+      "durationSeconds": 1.7999999523162842,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "Kick",
+          "time": 0.699999988079071
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Magic.Beast.Beast_Bite",
+      "name": "Beast_Bite",
+      "assetId": "138181002289743",
+      "durationSeconds": 1.0333333015441895,
+      "events": [
+        {
+          "value": "Action",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.5
+        },
+        {
+          "kind": "keyframe",
+          "name": "End",
+          "time": 1.0333333015441895
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Magic.Beast.Mode",
+      "name": "Mode",
+      "assetId": "105282574681472",
+      "durationSeconds": 1.0166666507720947,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "Action",
+          "time": 0.5833333134651184
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Magic.Beast.SavageMaul",
+      "name": "SavageMaul",
+      "assetId": "139459759062251",
+      "durationSeconds": 1,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "Action",
+          "time": 0.13333334028720856
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Magic.Beast.Claw_2",
+      "name": "Claw_2",
+      "assetId": "110379408310451",
+      "durationSeconds": 0.7666666507720947,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.3333333432674408
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Magic.Beast.Claw_1",
+      "name": "Claw_1",
+      "assetId": "94670063494025",
+      "durationSeconds": 0.7666666507720947,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.3499999940395355
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Magic.Beast.Claw_3",
+      "name": "Claw_3",
+      "assetId": "76031936349604",
+      "durationSeconds": 0.800000011920929,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.3166666626930237
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Magic.Dagon.Astral Authority",
+      "name": "Astral Authority",
+      "assetId": "125522337287824",
+      "durationSeconds": 3.5999999046325684,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "Fling",
+          "time": 0.9904166460037231
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Magic.Dagon.Gravity Field",
+      "name": "Gravity Field",
+      "assetId": "123558455209353",
+      "durationSeconds": 2.3333332538604736,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "Charge",
+          "time": 0.23999999463558197
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "Jump",
+          "time": 0.48374998569488525
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "Land",
+          "time": 1.1633332967758179
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "Hit",
+          "time": 2.0070834159851074
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Magic.Dagon.Void Collapse",
+      "name": "Void Collapse",
+      "assetId": "128485011343430",
+      "durationSeconds": 1.7666666507720947,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "Slash_Upward",
+          "time": 0.715833306312561
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Magic.Dagon.Rift Cleaver",
+      "name": "Rift Cleaver",
+      "assetId": "96005486124578",
+      "durationSeconds": 2.433333396911621,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "Slam",
+          "time": 0.9295833110809326
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "Release",
+          "time": 1.6991666555404663
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Magic.Dagon.Gravity_Field_Slam",
+      "name": "Gravity_Field_Slam",
+      "assetId": "112476682123008",
+      "durationSeconds": 1.125,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "Hit",
+          "time": 0.53125
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "Ended",
+          "time": 1.125
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Magic.Dagon.GravStep2",
+      "name": "GravStep2",
+      "assetId": "10230852540",
+      "durationSeconds": 0.8500000238418579,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.21666666865348816
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Magic.Dagon.Void Slash Victim",
+      "name": "Void Slash Victim",
+      "assetId": "123595676754633",
+      "durationSeconds": 3.866666555404663,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "Fall",
+          "time": 3.4008333683013916
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Magic.Dagon.GravStep1",
+      "name": "GravStep1",
+      "assetId": "111114983270881",
+      "durationSeconds": 0.9666666388511658,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "Snap",
+          "time": 0.6008333563804626
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Magic.Dagon.Singularity Reckon",
+      "name": "Singularity Reckon",
+      "assetId": "125920644150482",
+      "durationSeconds": 3.0333333015441895,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "Start_Effects",
+          "time": 0.7329166531562805
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Server.Swing 2",
+      "name": "Swing 2",
+      "assetId": "13822732009",
+      "durationSeconds": 0.6833333373069763,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "SwingWindow",
+          "time": 0.03333333507180214
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.28333333134651184
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Server.Attack 3",
+      "name": "Attack 3",
+      "assetId": "13756521296",
+      "durationSeconds": 2.133333444595337,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 1.0666667222976685
+        },
+        {
+          "kind": "keyframe",
+          "name": "End",
+          "time": 2.133333444595337
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Server.Attack 1",
+      "name": "Attack 1",
+      "assetId": "13756358680",
+      "durationSeconds": 1.3666666746139526,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.5516666769981384
+        },
+        {
+          "kind": "keyframe",
+          "name": "End",
+          "time": 1.3666666746139526
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Server.Attack 2",
+      "name": "Attack 2",
+      "assetId": "13756407921",
+      "durationSeconds": 1.4666666984558105,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.6000000238418579
+        },
+        {
+          "kind": "keyframe",
+          "name": "End",
+          "time": 1.4666666984558105
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Server.Staff1",
+      "name": "Staff1",
+      "assetId": "12808226586",
+      "durationSeconds": 0.6000000238418579,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.23333333432674408
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Server.Staff3",
+      "name": "Staff3",
+      "assetId": "10017557380",
+      "durationSeconds": 0.5833333134651184,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.4000000059604645
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Server.Staff2",
+      "name": "Staff2",
+      "assetId": "12808233350",
+      "durationSeconds": 0.36666667461395264,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.0833333358168602
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Server.HeavyStaff",
+      "name": "HeavyStaff",
+      "assetId": "12955527930",
+      "durationSeconds": 1.6333333253860474,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "SweepStarted",
+          "time": 0.13333334028720856
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "Swept",
+          "time": 0.4000000059604645
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "SlamStart",
+          "time": 1.0333333015441895
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 1.2333333492279053
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "SlamHit",
+          "time": 1.2999999523162842
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Server.Sword3",
+      "name": "Sword3",
+      "assetId": "74594683886829",
+      "durationSeconds": 0.8999999761581421,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "OpenFeint",
+          "time": 0.15000000596046448
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "CloseFeint",
+          "time": 0.4000000059604645
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.4333333373069763
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "AnimationEnd",
+          "time": 0.699999988079071
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Server.RunningSword",
+      "name": "RunningSword",
+      "assetId": "10017557380",
+      "durationSeconds": 0.5833333134651184,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.4000000059604645
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Server.Sword1",
+      "name": "Sword1",
+      "assetId": "89849437438829",
+      "durationSeconds": 0.9166666865348816,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "OpenFeint",
+          "time": 0.11666666716337204
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "CloseFeint",
+          "time": 0.4166666567325592
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.44999998807907104
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "AnimationEnd",
+          "time": 0.6499999761581421
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Server.Zombie2",
+      "name": "Zombie2",
+      "assetId": "11893001175",
+      "durationSeconds": 0.7166666388511658,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.4333333373069763
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Server.RunningDagger",
+      "name": "RunningDagger",
+      "assetId": "136129024555254",
+      "durationSeconds": 0.6166666746139526,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.3499999940395355
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Server.Dagger1",
+      "name": "Dagger1",
+      "assetId": "70936328766912",
+      "durationSeconds": 0.7333333492279053,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "OpenFeint",
+          "time": 0.13333334028720856
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "CloseFeint",
+          "time": 0.36666667461395264
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.46666666865348816
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "AnimationEnd",
+          "time": 0.6000000238418579
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Server.Punch2",
+      "name": "Punch2",
+      "assetId": "111510911006717",
+      "durationSeconds": 0.6166666746139526,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "OpenFeint",
+          "time": 0.11666666716337204
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "CloseFeint",
+          "time": 0.38333332538604736
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.4166666567325592
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "AnimationEnd",
+          "time": 0.5166666507720947
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Server.Punch1",
+      "name": "Punch1",
+      "assetId": "123693468061117",
+      "durationSeconds": 0.5166666507720947,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "OpenFeint",
+          "time": 0.0833333358168602
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "CloseFeint",
+          "time": 0.30000001192092896
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.3499999940395355
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "AnimationEnd",
+          "time": 0.44999998807907104
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Server.Heavy",
+      "name": "Heavy",
+      "assetId": "8594363819",
+      "durationSeconds": 0.7666666507720947,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.6000000238418579
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Server.Strike",
+      "name": "Strike",
+      "assetId": "9920890274",
+      "durationSeconds": 1,
+      "events": [
+        {
+          "kind": "keyframe",
+          "name": "HitWindow",
+          "time": 0.5333333611488342
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Server.GreatswordSprint",
+      "name": "GreatswordSprint",
+      "assetId": "11169772012",
+      "durationSeconds": 0.699999988079071,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.3333333432674408
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Server.Greatsword2",
+      "name": "Greatsword2",
+      "assetId": "89652204450491",
+      "durationSeconds": 0.8999999761581421,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "OpenFeint",
+          "time": 0.11666666716337204
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "CloseFeint",
+          "time": 0.38333332538604736
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.4166666567325592
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "AnimationEnd",
+          "time": 0.6166666746139526
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Server.Greatsword3",
+      "name": "Greatsword3",
+      "assetId": "89849437438829",
+      "durationSeconds": 0.9166666865348816,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "OpenFeint",
+          "time": 0.11666666716337204
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "CloseFeint",
+          "time": 0.4166666567325592
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.44999998807907104
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "AnimationEnd",
+          "time": 0.6499999761581421
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Server.Greatsword1",
+      "name": "Greatsword1",
+      "assetId": "89849437438829",
+      "durationSeconds": 0.9166666865348816,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "OpenFeint",
+          "time": 0.11666666716337204
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "CloseFeint",
+          "time": 0.4166666567325592
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.44999998807907104
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "AnimationEnd",
+          "time": 0.6499999761581421
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Server.Rapier1",
+      "name": "Rapier1",
+      "assetId": "123565976636065",
+      "durationSeconds": 0.75,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "OpenFeint",
+          "time": 0.23333333432674408
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "CloseFeint",
+          "time": 0.5
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.5333333611488342
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "AnimationEnd",
+          "time": 0.6333333253860474
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Server.HeavyRapier",
+      "name": "HeavyRapier",
+      "assetId": "10694823147",
+      "durationSeconds": 1.2000000476837158,
+      "events": [
+        {
+          "kind": "keyframe",
+          "name": "HitWindow",
+          "time": 0.699999988079071
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Server.Spear1",
+      "name": "Spear1",
+      "assetId": "86722279259826",
+      "durationSeconds": 0.949999988079071,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "OpenFeint",
+          "time": 0.13333334028720856
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "CloseFeint",
+          "time": 0.44999998807907104
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.5
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "AnimationEnd",
+          "time": 0.7333333492279053
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Server.Spear3",
+      "name": "Spear3",
+      "assetId": "122307357536158",
+      "durationSeconds": 0.8999999761581421,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "OpenFeint",
+          "time": 0.11666666716337204
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "CloseFeint",
+          "time": 0.4000000059604645
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.44999998807907104
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "AnimationEnd",
+          "time": 0.6833333373069763
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Server.HeavySpear",
+      "name": "HeavySpear",
+      "assetId": "10017994824",
+      "durationSeconds": 0.7166666388511658,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.5833333134651184
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Server.Spear2",
+      "name": "Spear2",
+      "assetId": "107811934597910",
+      "durationSeconds": 0.8999999761581421,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "OpenFeint",
+          "time": 0.11666666716337204
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "CloseFeint",
+          "time": 0.3499999940395355
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.4166666567325592
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "AnimationEnd",
+          "time": 0.6166666746139526
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Server.Sword2",
+      "name": "Sword2",
+      "assetId": "89652204450491",
+      "durationSeconds": 0.8999999761581421,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "OpenFeint",
+          "time": 0.11666666716337204
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "CloseFeint",
+          "time": 0.38333332538604736
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.4166666567325592
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "AnimationEnd",
+          "time": 0.6166666746139526
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Server.HeavySword",
+      "name": "HeavySword",
+      "assetId": "75088128678260",
+      "durationSeconds": 1.1333333253860474,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.7833333611488342
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Server.Zombie1",
+      "name": "Zombie1",
+      "assetId": "11892996649",
+      "durationSeconds": 0.7666666507720947,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.5166666507720947
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Server.Rapier2",
+      "name": "Rapier2",
+      "assetId": "88525660121099",
+      "durationSeconds": 0.699999988079071,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "OpenFeint",
+          "time": 0.15000000596046448
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "CloseFeint",
+          "time": 0.44999998807907104
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.4833333194255829
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "AnimationEnd",
+          "time": 0.5666666626930237
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Server.DaggerSpin",
+      "name": "DaggerSpin",
+      "assetId": "11262591531",
+      "durationSeconds": 0.5,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.23333333432674408
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Server.Swing 1",
+      "name": "Swing 1",
+      "assetId": "13822728105",
+      "durationSeconds": 1.0333333015441895,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "SwingWindow",
+          "time": 0.4333333373069763
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.6000000238418579
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Server.Dagger2",
+      "name": "Dagger2",
+      "assetId": "120283215167024",
+      "durationSeconds": 0.5666666626930237,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "OpenFeint",
+          "time": 0
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "CloseFeint",
+          "time": 0.13333334028720856
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.20000000298023224
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "AnimationEnd",
+          "time": 0.3333333432674408
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Server.Scythe3",
+      "name": "Scythe3",
+      "assetId": "115704466488110",
+      "durationSeconds": 0.75,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "OpenFeint",
+          "time": 0.13333334028720856
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "CloseFeint",
+          "time": 0.4000000059604645
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.46666666865348816
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "AnimationEnd",
+          "time": 0.5833333134651184
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Server.SprintKick",
+      "name": "SprintKick",
+      "assetId": "10230852540",
+      "durationSeconds": 0.8500000238418579,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.21666666865348816
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Server.Scythe1",
+      "name": "Scythe1",
+      "assetId": "104165983064642",
+      "durationSeconds": 0.7666666507720947,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "OpenFeint",
+          "time": 0.18333333730697632
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "CloseFeint",
+          "time": 0.4333333373069763
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.4833333194255829
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "AnimationEnd",
+          "time": 0.6000000238418579
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Server.Slam",
+      "name": "Slam",
+      "assetId": "13822736997",
+      "durationSeconds": 1.2833333015441895,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.699999988079071
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Server.LizardBoss1",
+      "name": "LizardBoss1",
+      "assetId": "103140391021149",
+      "durationSeconds": 1,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.6333333253860474
+        },
+        {
+          "kind": "keyframe",
+          "name": "End",
+          "time": 1
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Server.ScytheSprint",
+      "name": "ScytheSprint",
+      "assetId": "96581414677240",
+      "durationSeconds": 0.800000011920929,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.550000011920929
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Server.Punch3",
+      "name": "Punch3",
+      "assetId": "85570415456598",
+      "durationSeconds": 0.4833333194255829,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "OpenFeint",
+          "time": 0.10000000149011612
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "CloseFeint",
+          "time": 0.3333333432674408
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.36666667461395264
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "AnimationEnd",
+          "time": 0.4333333373069763
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Server.LizardBoss2",
+      "name": "LizardBoss2",
+      "assetId": "110876955202970",
+      "durationSeconds": 1.0333333015441895,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.6549999713897705
+        },
+        {
+          "kind": "keyframe",
+          "name": "End",
+          "time": 1.0333333015441895
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Server.LizardSoldier1",
+      "name": "LizardSoldier1",
+      "assetId": "71375698527524",
+      "durationSeconds": 0.8999999761581421,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.5333333611488342
+        },
+        {
+          "kind": "keyframe",
+          "name": "End",
+          "time": 0.8999999761581421
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Server.Misdirect",
+      "name": "Misdirect",
+      "assetId": "10250846568",
+      "durationSeconds": 0.28333333134651184,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.21666666865348816
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Server.LizardSoldier2",
+      "name": "LizardSoldier2",
+      "assetId": "115413726601821",
+      "durationSeconds": 0.9333333373069763,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.5666666626930237
+        },
+        {
+          "kind": "keyframe",
+          "name": "End",
+          "time": 0.9333333373069763
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Server.LizardSoldier3",
+      "name": "LizardSoldier3",
+      "assetId": "100328615092856",
+      "durationSeconds": 0.9333333373069763,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.5383333563804626
+        },
+        {
+          "kind": "keyframe",
+          "name": "End",
+          "time": 0.9333333373069763
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Server.ZombieKnockback",
+      "name": "ZombieKnockback",
+      "assetId": "11893004134",
+      "durationSeconds": 0.8833333253860474,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.6000000238418579
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Server.LizardSoldier4",
+      "name": "LizardSoldier4",
+      "assetId": "87606723288055",
+      "durationSeconds": 1.0333333015441895,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.6166666746139526
+        },
+        {
+          "kind": "keyframe",
+          "name": "End",
+          "time": 1.0333333015441895
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Server.Left Swipe",
+      "name": "Left Swipe",
+      "assetId": "9920882854",
+      "durationSeconds": 1.2333333492279053,
+      "events": [
+        {
+          "kind": "keyframe",
+          "name": "HitWindow",
+          "time": 0.5666666626930237
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Server.LizardBoss3",
+      "name": "LizardBoss3",
+      "assetId": "120129566668137",
+      "durationSeconds": 1.3333333730697632,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.7666666507720947
+        },
+        {
+          "kind": "keyframe",
+          "name": "End",
+          "time": 1.3333333730697632
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Server.BlightSlashRight",
+      "name": "BlightSlashRight",
+      "assetId": "125482975672454",
+      "durationSeconds": 0.8166666626930237,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.5
+        },
+        {
+          "kind": "keyframe",
+          "name": "End",
+          "time": 0.8166666626930237
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Server.BlightSwipes",
+      "name": "BlightSwipes",
+      "assetId": "137057617868950",
+      "durationSeconds": 2.4833333492279053,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "RightSlash",
+          "time": 0.5
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "LeftSlash",
+          "time": 1.3333333730697632
+        },
+        {
+          "kind": "keyframe",
+          "name": "End",
+          "time": 2.4833333492279053
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Server.Dagger3",
+      "name": "Dagger3",
+      "assetId": "94189509684810",
+      "durationSeconds": 0.6000000238418579,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "OpenFeint",
+          "time": 0
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "CloseFeint",
+          "time": 0.23333333432674408
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.30000001192092896
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "AnimationEnd",
+          "time": 0.4333333373069763
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Server.MushknightGrab",
+      "name": "MushknightGrab",
+      "assetId": "71734496574082",
+      "durationSeconds": 1.9666666984558105,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "CriticalIndicator",
+          "time": 0.24166665971279144
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.7799999713897705
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "VFX",
+          "time": 1.4583333730697632
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "Release",
+          "time": 1.5833333730697632
+        },
+        {
+          "kind": "keyframe",
+          "name": "End",
+          "time": 1.9666666984558105
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Server.MushmiteHeadbutt",
+      "name": "MushmiteHeadbutt",
+      "assetId": "106981115410840",
+      "durationSeconds": 2.5333333015441895,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.5666666626930237
+        },
+        {
+          "kind": "keyframe",
+          "name": "End",
+          "time": 2.5333333015441895
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Server.Wolf2",
+      "name": "Wolf2",
+      "assetId": "73629219095110",
+      "durationSeconds": 1.2999999523162842,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "Velocity",
+          "time": 0.5833333134651184
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.8620833158493042
+        },
+        {
+          "kind": "keyframe",
+          "name": "End",
+          "time": 1.2999999523162842
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Server.Wolf1",
+      "name": "Wolf1",
+      "assetId": "125957249913572",
+      "durationSeconds": 1.2333333492279053,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "Velocity",
+          "time": 0.5166666507720947
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.8966666460037231
+        },
+        {
+          "kind": "keyframe",
+          "name": "End",
+          "time": 1.2333333492279053
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Server.BlightSlashLeft",
+      "name": "BlightSlashLeft",
+      "assetId": "85982255640312",
+      "durationSeconds": 1.6666666269302368,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.5166666507720947
+        },
+        {
+          "kind": "keyframe",
+          "name": "End",
+          "time": 1.6666666269302368
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Server.HeavyDagger",
+      "name": "HeavyDagger",
+      "assetId": "9557400534",
+      "durationSeconds": 1.1333333253860474,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "StartLunge",
+          "time": 0.3166666626930237
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "ActionFrame",
+          "time": 0.3499999940395355
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "ValidEnd",
+          "time": 0.699999988079071
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Server.Scythe2",
+      "name": "Scythe2",
+      "assetId": "70574481445445",
+      "durationSeconds": 0.7666666507720947,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "OpenFeint",
+          "time": 0.15000000596046448
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "CloseFeint",
+          "time": 0.4166666567325592
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.5
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "AnimationEnd",
+          "time": 0.6166666746139526
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Server.Knockback",
+      "name": "Knockback",
+      "assetId": "99787918237880",
+      "durationSeconds": 0.6000000238418579,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.38333332538604736
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "AnimationEnd",
+          "time": 0.5333333611488342
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Server.HeavyScythe",
+      "name": "HeavyScythe",
+      "assetId": "76395852273763",
+      "durationSeconds": 1.0166666507720947,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.28333333134651184
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow2",
+          "time": 0.6000000238418579
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Server.HollowseerBite",
+      "name": "HollowseerBite",
+      "assetId": "132013056786173",
+      "durationSeconds": 3.7166666984558105,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.8833333253860474
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 1.649999976158142
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "ValidEnd",
+          "time": 2.0999999046325684
+        },
+        {
+          "kind": "keyframe",
+          "name": "End",
+          "time": 3.7166666984558105
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Server.ElkStomp2",
+      "name": "ElkStomp2",
+      "assetId": "18192998083",
+      "durationSeconds": 3.4583332538604736,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 1.7916666269302368
+        },
+        {
+          "kind": "keyframe",
+          "name": "End",
+          "time": 3.4583332538604736
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Server.RunningKatana",
+      "name": "RunningKatana",
+      "assetId": "10017557380",
+      "durationSeconds": 0.5833333134651184,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.4000000059604645
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Server.Golem 2",
+      "name": "Golem 2",
+      "assetId": "14158953103",
+      "durationSeconds": 0.800000011920929,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.4633333384990692
+        },
+        {
+          "kind": "keyframe",
+          "name": "End",
+          "time": 0.800000011920929
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Server.Katana2",
+      "name": "Katana2",
+      "assetId": "14527234407",
+      "durationSeconds": 0.9333333373069763,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "OpenFeint",
+          "time": 0.23333333432674408
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "CloseFeint",
+          "time": 0.5666666626930237
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.699999988079071
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "AnimationEnd",
+          "time": 0.8333333134651184
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Server.Katana3",
+      "name": "Katana3",
+      "assetId": "112932641545194",
+      "durationSeconds": 1.0399999618530273,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "OpenFeint",
+          "time": 0.3199999928474426
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "CloseFeint",
+          "time": 0.6800000071525574
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.7200000286102295
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "AnimationEnd",
+          "time": 0.8799999952316284
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Server.Mace Slam",
+      "name": "Mace Slam",
+      "assetId": "13822736997",
+      "durationSeconds": 1.2833333015441895,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.699999988079071
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Server.Mace Swing 2",
+      "name": "Mace Swing 2",
+      "assetId": "13960433818",
+      "durationSeconds": 0.7599999904632568,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.1599999964237213
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Server.Golem 1",
+      "name": "Golem 1",
+      "assetId": "14158890923",
+      "durationSeconds": 0.9200000166893005,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.6691666841506958
+        },
+        {
+          "kind": "keyframe",
+          "name": "End",
+          "time": 0.9200000166893005
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Server.Mace Swing 1",
+      "name": "Mace Swing 1",
+      "assetId": "13960430722",
+      "durationSeconds": 1.159999966621399,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.800000011920929
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Server.HeavyTrident",
+      "name": "HeavyTrident",
+      "assetId": "14850217335",
+      "durationSeconds": 3.5779166221618652,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "GrabWindow",
+          "time": 1.1779166460037231
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "SlamWindow",
+          "time": 2.777916669845581
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Server.Trident3",
+      "name": "Trident3",
+      "assetId": "10017557380",
+      "durationSeconds": 0.5833333134651184,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.4000000059604645
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Server.GroveTailSwipe",
+      "name": "GroveTailSwipe",
+      "assetId": "18133501787",
+      "durationSeconds": 1.899999976158142,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "SwingWindow",
+          "time": 0.8333333134651184
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 1
+        },
+        {
+          "kind": "keyframe",
+          "name": "End",
+          "time": 1.899999976158142
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Server.GrovePounce",
+      "name": "GrovePounce",
+      "assetId": "18133497814",
+      "durationSeconds": 2.1666667461395264,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "SwingWindow",
+          "time": 0.6000000238418579
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.699999988079071
+        },
+        {
+          "kind": "keyframe",
+          "name": "End",
+          "time": 2.1666667461395264
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Server.Katana1",
+      "name": "Katana1",
+      "assetId": "14527230703",
+      "durationSeconds": 1.1666666269302368,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "OpenFeint",
+          "time": 0.23333333432674408
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "CloseFeint",
+          "time": 0.699999988079071
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.7666666507720947
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "AnimationEnd",
+          "time": 0.8999999761581421
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Server.HeavyKatana",
+      "name": "HeavyKatana",
+      "assetId": "14452988294",
+      "durationSeconds": 1.1200000047683716,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "AllowFeint",
+          "time": 0.36000001430511475
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.800000011920929
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Server.Trident1",
+      "name": "Trident1",
+      "assetId": "10017535748",
+      "durationSeconds": 0.5,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.38333332538604736
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Server.Trident2",
+      "name": "Trident2",
+      "assetId": "10017543126",
+      "durationSeconds": 0.4166666567325592,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.30000001192092896
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Server.OgreSwipe1",
+      "name": "OgreSwipe1",
+      "assetId": "17861866763",
+      "durationSeconds": 1.0399999618530273,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "SwingWindow",
+          "time": 0.75
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.8333333134651184
+        },
+        {
+          "kind": "keyframe",
+          "name": "End",
+          "time": 1.0399999618530273
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Server.Greataxe3",
+      "name": "Greataxe3",
+      "assetId": "11100897909",
+      "durationSeconds": 0.699999988079071,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.4000000059604645
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "AnimationEnd",
+          "time": 0.5199999809265137
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Server.Spirit1",
+      "name": "Spirit1",
+      "assetId": "18334915919",
+      "durationSeconds": 0.7833333611488342,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.4333333373069763
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Server.Rapier3",
+      "name": "Rapier3",
+      "assetId": "75817196379763",
+      "durationSeconds": 0.75,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "OpenFeint",
+          "time": 0.21666666865348816
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "CloseFeint",
+          "time": 0.5
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.5333333611488342
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "AnimationEnd",
+          "time": 0.6166666746139526
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Server.OgreSwipe2",
+      "name": "OgreSwipe2",
+      "assetId": "17861869512",
+      "durationSeconds": 1.0800000429153442,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "SwingWindow",
+          "time": 0.25
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.3333333432674408
+        },
+        {
+          "kind": "keyframe",
+          "name": "End",
+          "time": 1.0800000429153442
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Server.HeavyGreataxe",
+      "name": "HeavyGreataxe",
+      "assetId": "17564283859",
+      "durationSeconds": 0.3199999928474426,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "StartSpin",
+          "time": 0
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.03999999910593033
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Server.Greataxe2",
+      "name": "Greataxe2",
+      "assetId": "11100902766",
+      "durationSeconds": 0.6600000262260437,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.2800000011920929
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "AnimationEnd",
+          "time": 0.4399999976158142
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Server.GreataxeSprint",
+      "name": "GreataxeSprint",
+      "assetId": "11169772012",
+      "durationSeconds": 0.699999988079071,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.3333333432674408
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Server.Greataxe1",
+      "name": "Greataxe1",
+      "assetId": "11100897909",
+      "durationSeconds": 0.699999988079071,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.4000000059604645
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "AnimationEnd",
+          "time": 0.5199999809265137
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Server.CrawlerLeft",
+      "name": "CrawlerLeft",
+      "assetId": "112272302102744",
+      "durationSeconds": 0.30000001192092896,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.18333333730697632
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Server.CrawlerCritical",
+      "name": "CrawlerCritical",
+      "assetId": "90147459897801",
+      "durationSeconds": 0.9166666865348816,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "Sweep",
+          "time": 0.18333333730697632
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.44999998807907104
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Server.HeavyGreatsword",
+      "name": "HeavyGreatsword",
+      "assetId": "11100915060",
+      "durationSeconds": 0.7166666388511658,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.5333333611488342
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Server.LizardBossStomp",
+      "name": "LizardBossStomp",
+      "assetId": "73042737238490",
+      "durationSeconds": 1.8333333730697632,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.6333333253860474
+        },
+        {
+          "kind": "keyframe",
+          "name": "End",
+          "time": 1.8333333730697632
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Server.Right Swipe",
+      "name": "Right Swipe",
+      "assetId": "9920866928",
+      "durationSeconds": 1.2333333492279053,
+      "events": [
+        {
+          "kind": "keyframe",
+          "name": "HitWindow",
+          "time": 0.6000000238418579
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Server.CrawlerRight",
+      "name": "CrawlerRight",
+      "assetId": "75576032954820",
+      "durationSeconds": 0.6499999761581421,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.44999998807907104
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Server.Spirit3",
+      "name": "Spirit3",
+      "assetId": "11893004134",
+      "durationSeconds": 0.8833333253860474,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.6000000238418579
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Server.Spirit2",
+      "name": "Spirit2",
+      "assetId": "18334923698",
+      "durationSeconds": 0.7333333492279053,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.3333333432674408
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Server.ElkStomp1",
+      "name": "ElkStomp1",
+      "assetId": "18320514554",
+      "durationSeconds": 3.4583332538604736,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 1.7916666269302368
+        },
+        {
+          "kind": "keyframe",
+          "name": "End",
+          "time": 3.4583332538604736
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Server.Brute Swing 1",
+      "name": "Brute Swing 1",
+      "assetId": "112682800928139",
+      "durationSeconds": 1.0666667222976685,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "SwingWindow",
+          "time": 0.4166666567325592
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.5666666626930237
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Server.Brute Swing 2",
+      "name": "Brute Swing 2",
+      "assetId": "72354029824787",
+      "durationSeconds": 1.0499999523162842,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "SwingWindow",
+          "time": 0.4833333194255829
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.6166666746139526
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    },
+    {
+      "path": "ReplicatedStorage.Animations.Server.Brute Slam",
+      "name": "Brute Slam",
+      "assetId": "80495839788581",
+      "durationSeconds": 0.9666666388511658,
+      "events": [
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "SwingWindow",
+          "time": 0.2666666805744171
+        },
+        {
+          "value": "",
+          "kind": "marker",
+          "name": "HitWindow",
+          "time": 0.44999998807907104
+        }
+      ],
+      "error": null,
+      "parryVerified": false
+    }
+  ]
+}
