@@ -201,7 +201,7 @@ local function learnFromHit()
         local a = activeNoMarker[i]
         if now - a.t > 4 or not a.track.IsPlaying then
             table.remove(activeNoMarker, i)
-        elseif a.track.TimePosition > 0 then
+        elseif a.track.TimePosition > 0 and a.track.TimePosition <= a.track.Length then
             local t = a.track.TimePosition
             learned[a.id] = learned[a.id] and (learned[a.id] * 0.6 + t * 0.4) or t
             saveLearned()
@@ -309,7 +309,7 @@ local function holdBlock(duration)
     task.spawn(function()
         while os.clock() < blockUntil do
             BlockInput.send({Action = "Block Input"})
-            task.wait()
+            task.wait(0.03)
         end
         BlockInput.send({Action = "End Block"})
         holding = false
@@ -473,7 +473,7 @@ local function make(class, props)
 end
 
 local gui = make("ScreenGui", {
-    Name = "meowmeowv5",
+    Name = "meowmeowv6",
     ResetOnSpawn = false,
     ZIndexBehavior = Enum.ZIndexBehavior.Global,
 })
@@ -501,7 +501,7 @@ make("TextLabel", {
     Size = UDim2.new(0.5, 0, 1, 0),
     Position = UDim2.fromOffset(10, 0),
     BackgroundTransparency = 1,
-    Text = "meowmeow v5",
+    Text = "meowmeow v6",
     TextColor3 = C.Text,
     Font = Enum.Font.GothamBold,
     TextSize = 13,
@@ -873,9 +873,9 @@ local lastBroomFind = 0
 
 local function findBroomVelocity()
     local char = LP.Character
-    for _, d in workspace:GetDescendants() do
-        if d:IsA("LinearVelocity") and d.Enabled
-            and ((char and d:IsDescendantOf(char)) or string.find(d:GetFullName(), "Broom", 1, true)) then
+    if not char then return end
+    for _, d in char:GetDescendants() do
+        if d:IsA("LinearVelocity") and d.Enabled then
             return d
         end
     end
@@ -894,6 +894,7 @@ local function hookBroom(lv)
 end
 
 RunService.Heartbeat:Connect(function()
+    if CFG.BroomSpeed <= 1 then return end
     if broomVel and broomVel.Parent then return end
     if os.clock() - lastBroomFind < 0.5 then return end
     lastBroomFind = os.clock()
